@@ -72,7 +72,7 @@ section{
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background: url(https://live.staticflickr.com/65535/52611535616_fe66629865_z.jpg);
+	background: url(https://peterburd.files.wordpress.com/2022/11/bocchitherock4-2.jpg);
 	background-size: cover;
 	background-position: center;
 	display: grid;
@@ -263,6 +263,11 @@ header.sticky{
 	bottom: 30px;
 	letter-spacing: 2px;
 }
+
+.col-content .blu {
+	color: blueviolet
+}
+
 .col-content img:hover{
 	filter: brightness(100%) hue-rotate(45deg);
 	transform: scale(1.04);
@@ -375,6 +380,12 @@ header.sticky{
 	padding-top: 90px;
 }
 .end-text p{
+	color: var(--bg-color);
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+.end-text p a{
 	color: var(--bg-color);
 	font-size: 14px;
 	letter-spacing: 2px;
