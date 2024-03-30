@@ -295,7 +295,20 @@ header.sticky{
 	line-height: 30px;
 }
 
+#countdown-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 #demo{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  #otherdemo{
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
@@ -306,6 +319,33 @@ header.sticky{
     font-size: 30px;
     margin-top: 10px;
   }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: green;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--progress-color, green); /* Use CSS variable for color */
+    transition: width 1s linear;
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--progress-color, green);
+    }
+    50% {
+        background-color: var(--pulse-color, #00ff00);
+    }
+    100% {
+        background-color: var(--progress-color, green);
+    }
+}
 
 #contact{
 	background: var(--main-color);
