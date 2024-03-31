@@ -17,81 +17,138 @@ window.onscroll = () => {
 	navbar.classList.remove('open');
 };
 
-// Set the date we're counting down to
-var countDownDate = new Date("4 Nov, 2024 00:00:00").getTime();
-var countStartDate = new Date("25 Mar, 2024 00:00:00").getTime();
-var TIME_LIMIT = 1000 * 60 * 60 * 24; // 24 hours in milliseconds
+function createCountdown(countDownDate, countStartDate, containerId) {
+  // Create elements dynamically
+  var container = document.getElementById(containerId);
+  var demo = document.createElement('p');
+  var progressBar = document.createElement('div');
+  var progressBarFill = document.createElement('div');
+  var demo2 = document.createElement('p');
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-    // Get today's date and time
-    var now = new Date().getTime();
+  // Add classes
+  demo.classList.add('countdown-display');
+  progressBar.classList.add('progress-bar');
+  progressBarFill.classList.add('progress-bar-fill');
+  demo2.classList.add('countdown-display');
 
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    var realdistance = countDownDate - countStartDate;    
-    var altdistance = now - countDownDate;
+  // Append elements to the container
+  container.appendChild(demo);
+  progressBar.appendChild(progressBarFill);
+  container.appendChild(progressBar);
+  container.appendChild(demo2);
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var realhours = Math.floor(distance / (1000 * 60 * 60));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var mseconds = Math.floor((distance % (1000)));  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+      // Get today's date and time
+      var now = new Date().getTime();
 
-    // Time calculations for days, hours, minutes and seconds
-    var arealhours = Math.floor(altdistance / (1000 * 60 * 60));
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      var realdistance = countDownDate - countStartDate;    
+      var altdistance = now - countDownDate;
 
-    // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = "Commences in: " + days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var realhours = Math.floor(distance / (1000 * 60 * 60));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var mseconds = Math.floor((distance % (1000)));  
 
-    // Calculate the time fraction
-    var timeFraction = ( 1 - ( distance / realdistance));
-    var progressWidth = timeFraction * 100 ;
+      // Time calculations for days, hours, minutes and seconds
+      var arealhours = Math.floor(altdistance / (1000 * 60 * 60));
 
-    // Display the result in the element with id="otherdemo"
-    document.getElementById("otherdemo").innerHTML = realhours + " hours until the bar is full."; 
+      // ahh grammar
+      var hoursText = hours < 2 ? "hour" : "hours";
+      
 
-    // Update the progress bar
-    document.getElementById("progress").style.width = progressWidth + "%";
+      // Display the result in the element with class="countdown-display"
+      demo.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-    // Change the progress color at certain points of time
-    if (progressWidth >= 20 && progressWidth < 40) { // 20%
-      document.getElementById("progressbg").style.backgroundColor = "Chartreuse";      
-      document.getElementById("progress").style.setProperty('--progress-color', 'Chartreuse');
-      document.getElementById("progress").style.setProperty('--pulse-color', 'yellow');
-  } else if (progressWidth >= 40 && progressWidth < 60) { // 40%
-    document.getElementById("progressbg").style.backgroundColor = 'yellow';
-      document.getElementById("progress").style.setProperty('--progress-color', 'yellow');
-      document.getElementById("progress").style.setProperty('--pulse-color', 'orange');
-    } else if (progressWidth >= 60 && progressWidth < 80) { // 60%
-      document.getElementById("progressbg").style.backgroundColor = 'orange'
-      document.getElementById("progress").style.setProperty('--progress-color', 'orange');
-      document.getElementById("progress").style.setProperty('--pulse-color', 'red');
-    } else if (progressWidth >= 80 && progressWidth < 95) { // 80%
-      document.getElementById("progressbg").style.backgroundColor = 'red';
-      document.getElementById("progress").style.setProperty('--progress-color', 'red');
-      document.getElementById("progress").style.setProperty('--pulse-color', 'darkred');
-    } else if (progressWidth >= 95 && progressWidth < 100) { // 95%
-    document.getElementById("progressbg").style.backgroundColor = 'darkred';
-    document.getElementById("progress").style.setProperty('--progress-color', 'darkred');
-    document.getElementById("progress").style.setProperty('--pulse-color', 'black');
-    } else if (progressWidth >= 100) { // death
-    document.getElementById("progressbg").style.backgroundColor = 'black';
-    document.getElementById("progress").style.setProperty('--progress-color', 'white');
-    document.getElementById("progress").style.setProperty('--pulse-color', 'black');
-    } else {
-      document.getElementById("progressbg").style.backgroundColor = "green";      
-      document.getElementById("progress").style.setProperty('--progress-color', 'green');
-      document.getElementById("progress").style.setProperty('--pulse-color', 'Chartreuse');
-    }
+      // Switch to minutes or seconds once it reaches 0 hours
+      if (realhours === 0) {
+          demo2.innerHTML = minutes + " minutes and " + seconds + " seconds until the bar is full.";
+      } else {
+          demo2.innerHTML = realhours + " " + hoursText + " until the bar is full.";
+      }
 
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "The countdown has ended " + arealhours + " hours ago." ;    
-        document.getElementById("otherdemo").innerHTML = "But otherwise, the progress bar is actually " + progressWidth + "% full!";      
-    }
-}, 300);
+      // Calculate the time fraction
+      var timeFraction = ( 1 - ( distance / realdistance));
+      var progressWidth = timeFraction * 100 ;
+
+      // Update the progress bar
+      progressBarFill.style.width = progressWidth + "%";
+
+        // Change the progress color at certain points of time
+      if (progressWidth >= 20 && progressWidth < 40) { // 20%
+          progressBar.style.backgroundColor = "Chartreuse";
+          progressBarFill.style.setProperty('--progress-color', 'Chartreuse');
+          progressBarFill.style.setProperty('--pulse-color', 'yellow');
+      } else if (progressWidth >= 40 && progressWidth < 60) { // 40%
+          progressBar.style.backgroundColor = 'yellow';
+          progressBarFill.style.setProperty('--progress-color', 'yellow');
+          progressBarFill.style.setProperty('--pulse-color', 'orange');
+      } else if (progressWidth >= 60 && progressWidth < 80) { // 60%
+          progressBar.style.backgroundColor = 'orange';
+          progressBarFill.style.setProperty('--progress-color', 'orange');
+          progressBarFill.style.setProperty('--pulse-color', 'red');
+      } else if (progressWidth >= 80 && progressWidth < 95) { // 80%
+          progressBar.style.backgroundColor = 'red';
+          progressBarFill.style.setProperty('--progress-color', 'red');
+          progressBarFill.style.setProperty('--pulse-color', 'darkred');
+      } else if (progressWidth >= 95 && progressWidth < 100) { // 95%
+          progressBar.style.backgroundColor = 'darkred';
+          progressBarFill.style.setProperty('--progress-color', 'darkred');
+          progressBarFill.style.setProperty('--pulse-color', 'black');
+      } else if (progressWidth >= 100) { // death
+          progressBar.style.backgroundColor = 'black';
+          progressBarFill.style.setProperty('--progress-color', 'white');
+          progressBarFill.style.setProperty('--pulse-color', 'black');
+      } else {
+          progressBar.style.backgroundColor = "green";
+          progressBarFill.style.setProperty('--progress-color', 'green');
+          progressBarFill.style.setProperty('--pulse-color', 'Chartreuse');
+      }
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+          var positiveDistance = Math.abs(distance);
+          var positiveRealHours = Math.abs(arealhours)
+
+        if (realhours === 0) {
+            demo.innerHTML = "The countdown has ended " + minutes + " minutes and " + seconds + " seconds ago.";
+        } else if (arealhours === 1) {
+          demo.innerHTML = "The countdown has ended " + positiveRealHours + " hour ago." ;  
+        }        
+        else {
+            demo.innerHTML = "The countdown has ended " + positiveRealHours + " hours ago." ;  
+        }
+ 
+          demo2.innerHTML = "If you prefer in milliseconds however, " + positiveDistance + " ms."
+      }
+  }, 10);
+}
+
+// Example usage:
+var countDownDate1 = new Date("12 Aug, 2024 00:00:00").getTime();
+var countStartDate1 = new Date("25 Mar, 2024 00:00:00").getTime();
+createCountdown(countDownDate1, countStartDate1, "countdown-container-1");
+
+var countDownDate2 = new Date("5 Nov, 2024 00:00:00").getTime();
+var countStartDate2 = new Date("25 Mar, 2024 00:00:00").getTime();
+createCountdown(countDownDate2, countStartDate2, "countdown-container-2");
+
+// Example usage for countdown 3
+var countDownDate3 = new Date("7 Apr, 2024 00:00:00").getTime();
+var countStartDate3 = new Date("31 Mar, 2024, 18:00:00").getTime();
+createCountdown(countDownDate3, countStartDate3, "countdown-container-3");
+
+// Example usage for countdown 4
+var countDownDate4 = new Date("31 Mar, 2024, 21:00:01").getTime();
+var countStartDate4 = new Date("31 Mar, 2024, 00:00:00").getTime();
+createCountdown(countDownDate4, countStartDate4, "countdown-container-4");
+
+// Example usage for countdown 5
+var countDownDate5 = new Date("28 Feb, 2104 00:00:00").getTime();
+var countStartDate5 = new Date("28 Feb, 2004 00:00:00").getTime();
+createCountdown(countDownDate5, countStartDate5, "countdown-container-5");

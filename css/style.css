@@ -295,32 +295,20 @@ header.sticky{
 	line-height: 30px;
 }
 
-#countdown-container {
+.countdown-container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#demo{
+.countdown-display {
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
-  }
+}
 
-  #otherdemo{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
-  }
-
-  #demo2{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
-  }
-
-  .progress-bar {
+.progress-bar {
     width: 100%;
     height: 20px;
     background-color: green;
