@@ -66,11 +66,25 @@ function createCountdown(countDownDate, countStartDate, containerId) {
       demo.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
       // Switch to minutes or seconds once it reaches 0 hours
-      if (realhours === 0) {
-          demo2.innerHTML = minutes + " minutes and " + seconds + " seconds until the bar is full.";
-      } else {
-          demo2.innerHTML = realhours + " " + hoursText + " until the bar is full.";
-      }
+    if (realhours === 0) {
+        let timeText = "";
+        if (minutes > 0) {
+            timeText = `${minutes} minute${minutes === 1 ? '' : 's'}`;
+            if (seconds > 0) {
+                timeText += ` and ${seconds} second${seconds === 1 ? '' : 's'}`;
+            }
+            timeText += " until the bar is full.";
+        } else if (seconds > 0) {
+            timeText = `${seconds} second${seconds === 1 ? '' : 's'} until the bar is full.`;
+        } else {
+            timeText = "until the bar is full.";
+        }
+        demo2.innerHTML = timeText;
+    } else if (realhours > 1) {
+        demo2.innerHTML = `${realhours} hours until the bar is full.`;
+    } else {
+        demo2.innerHTML = `${realhours} hour until the bar is full.`;
+    }
 
       // Calculate the time fraction
       var timeFraction = ( 1 - ( distance / realdistance));
@@ -144,8 +158,8 @@ var countStartDate3 = new Date("31 Mar, 2024, 18:00:00").getTime();
 createCountdown(countDownDate3, countStartDate3, "countdown-container-3");
 
 // Example usage for countdown 4
-var countDownDate4 = new Date("31 Mar, 2024, 21:00:01").getTime();
-var countStartDate4 = new Date("31 Mar, 2024, 00:00:00").getTime();
+var countDownDate4 = new Date("2 Apr, 2024, 22:18:01").getTime();
+var countStartDate4 = new Date("2 Apr, 2024, 22:00:00").getTime();
 createCountdown(countDownDate4, countStartDate4, "countdown-container-4");
 
 // Example usage for countdown 5

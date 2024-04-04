@@ -194,7 +194,7 @@ header.sticky{
 	cursor: pointer;
 }
 .thum img{
-	border-radius: 10px;
+	border-radius: 5%;
 	width: 100%;
 	height: auto;
 }
