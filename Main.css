@@ -299,6 +299,10 @@ text-decoration: underline;
 		animation: fadeIn 0.5s ease-out;
 	}
 
+  #myaccordion pre {
+    overflow: auto;
+  }
+
 
         /* Accordion layer 2 thingy for math 3+ */
 	.hidecontent {
@@ -406,3 +410,4 @@ h60 {
   color:#ff0073
 
 }
+
