@@ -37,7 +37,7 @@
 <input type="checkbox" id="accordion1" class="hidecontent"/>
 <label for="accordion1">Lab 4.1 - Relational Operators and the if Statement</label>
 <div class="content hidecontent">
-<pre><code>// This program tests whether or not an initialized value
+<pre><code class="cpp">// This program tests whether or not an initialized value
 // is equal to a value input by the user
 
 #include 《iostream》
@@ -57,7 +57,7 @@ int main() {
 <p>Run the program several times using a different input each time.<br>
     Does the program do what you expect? Is so, explain what it is doing.<br>
     If not, locate the error and fix it.</p>
-<pre><code>// This program tests whether or not an initialized value
+<pre><code class="cpp">// This program tests whether or not an initialized value
 // is equal to a value input by the user
 
 #include 《iostream》
@@ -105,7 +105,7 @@ The assignment operator will assign the value of num2 to num1, and the condition
 <p>Modify the program so that the user inputs both values to be tested for equality.<br>
     Make sure you have a prompt for each input.<br>
     Test the program with pairs of values that are the same and that are different.</p>
-<pre><code>// This program tests whether or not an initialized value
+<pre><code class="cpp">// This program tests whether or not an initialized value
 // is equal to a value input by the user
 
 #include 《iostream》
@@ -136,7 +136,7 @@ int main()
 <h1>Exercise 3</h1>
 <p>Modify the program so that when the numbers are the same it prints the following lines:<br>
     The values are the same. Hey that’s a coincidence!</p>
-<pre><code>// This program tests whether or not an initialized value
+<pre><code class="cpp">// This program tests whether or not an initialized value
 // is equal to a value input by the user
 
 #include 《iostream》
@@ -168,7 +168,7 @@ int main()
 <h1>Exercise 4</h1>
 <p>Modify the revised Exercise 3 program by replacing the two if statements with a single if/else statement.<br>
     Run the program again to test the results</p>
-<pre><code>// This program tests whether or not an initialized value
+<pre><code class="cpp">// This program tests whether or not an initialized value
 // is equal to a value input by the user
 
 #include 《iostream》
@@ -201,7 +201,7 @@ int main()
 <pre>
 In C++, if there’s only one statement following an if or else, you don’t need to use {} (braces). 
 The braces are used when you have multiple statements in the if or else block. Here’s an example:
-<code>if (num1 == num2)
+<code class="cpp">if (num1 == num2)
 {
     cout << "The values are the same.";
     cout << "Hey, that's a coincidence!" << endl;
@@ -224,7 +224,7 @@ However, using braces can make your code more readable and less error-prone, esp
 <input type="checkbox" id="accordion2" class="hidecontent"/>
 <label for="accordion2">Lab 4.2 - if/else if Statements</label>
 <div class="content hidecontent">
-<pre><code>// This program prints "You Pass" if a student's average is
+<pre><code class="cpp">// This program prints "You Pass" if a student's average is
 // 60 or higher and prints "You Fail" otherwise
 
 #include 《iostream》
@@ -242,7 +242,7 @@ int main() {
 <p>Run the program three times using 80, 55 and 60 for the average.<br>
     What happens when you input 60 as the average?<br>
     Modify the first if statement so that the program will also print “You Pass” if the average equals 60.</p>
-<pre><code>// This program prints "You Pass" if a student's average is
+<pre><code class="cpp">// This program prints "You Pass" if a student's average is
 // 60 or higher and prints "You Fail" otherwise
 
 #include 《iostream》
@@ -282,7 +282,7 @@ Now, when you input 60 as the average, the program will print “You Pass”.
 
 <h1>Exercise 2</h1>
 <p>Modify the program so that it uses an if/else statement rather than two if statements.</p>
-<pre><code>
+<pre><code class="cpp">
 // This program prints "You Pass" if a student's average is
 // 60 or higher and prints "You Fail" otherwise 
 
@@ -321,7 +321,7 @@ Otherwise, it will print “You Fail”.
     Invalid data (data above 100), ‘A’ category (90–100), ‘B’ category (80–89), “You Pass” category (60–79), “You Fail” category (0–59).
     
     What will happen to your program if you enter a negative value such as -12?</p>
-<pre><code>// This program prints "You Pass" if a student's average is
+<pre><code class="cpp">// This program prints "You Pass" if a student's average is
 // 60 or higher and prints "You Fail" otherwise
 
 #include 《iostream》
@@ -393,7 +393,7 @@ If you enter a negative value such as -12, the program will print “Invalid dat
 <input type="checkbox" id="accordion3" class="hidecontent"/>
 <label for="accordion3">Lab 4.3 - Logical Operators</label>
 <div class="content hidecontent">
-<pre><code>// This program illustrates the use of logical operators
+<pre><code class="cpp">// This program illustrates the use of logical operators
 
 #include 《iostream》
 using namespace std;
@@ -415,7 +415,7 @@ int main() {
 </code></pre>
 <h1>Exercise 1</h1>
 <p>How could you rewrite gpa >= 2.0 in the first if statement using the NOT operator?</p>
-<pre><code>// This program illustrates the use of logical operators
+<pre><code class="cpp">// This program illustrates the use of logical operators
 
 #include 《iostream》
 using namespace std;
@@ -459,7 +459,7 @@ Otherwise, it will print “You need more schooling”.
 
 <h1>Exercise 2</h1>
 <p>Could you replace <pre>year !='4'</pre> in the else if statement with <pre>year < 4</pre> or <pre>year <= 3</pre>? Why or why not?</p>
-<pre><code>// This program illustrates the use of logical operators
+<pre><code class="cpp">// This program illustrates the use of logical operators
 
 #include 《iostream》
 using namespace std;
@@ -557,7 +557,7 @@ with
 <pre>else if ( year != '4' && gpa < 2.0)</pre>
 which students will graduate and which will not graduate according to this new program?
 Does this handle all cases (i.e., all combinations of year and gpa)?</p>
-<pre><code>// This program illustrates the use of logical operators
+<pre><code class="cpp">// This program illustrates the use of logical operators
 
 #include 《iostream》
 using namespace std;
@@ -673,7 +673,7 @@ To handle all cases, you might need to add an else statement to cover any remain
 <p>Could you replace 
 <pre>else if ( year != '4'|| gpa < 2.0)</pre> with the
     single word <pre>else?</pre></p>
-<pre><code>// This program illustrates the use of logical operators
+<pre><code class="cpp">// This program illustrates the use of logical operators
 
 #include 《iostream》
 using namespace std;
@@ -750,7 +750,7 @@ This ensures that all possible cases are handled.
 <input type="checkbox" id="accordion4" class="hidecontent"/>
 <label for="accordion4">Lab 4.4 - The switch Statement</label>
 <div class="content hidecontent">
-<pre><code>// This program illustrates the use of the switch statement.
+<pre><code class="cpp">// This program illustrates the use of the switch statement.
 
 #include 《iostream》
 using namespace std;
@@ -783,7 +783,7 @@ int main() {
 <h1>Exercise 1</h1>
 <p>Remove the break statements from each of the cases.<br>
     What is the effect on the execution of the program?</p>
-<pre><code>// This program illustrates the use of the switch statement.
+<pre><code class="cpp">// This program illustrates the use of the switch statement.
 
 #include 《iostream》
 using namespace std;
@@ -863,7 +863,7 @@ Sample Run:
 A
 YOU PASSED!
 an A - excellent work!</pre></p>
-<pre><code>// This program illustrates the use of the switch statement.
+<pre><code class="cpp">// This program illustrates the use of the switch statement.
 
 #include 《iostream》
 using namespace std;
@@ -1005,7 +1005,7 @@ Feel free to experiment and choose the one that best suits your needs and coding
 <p>Rewrite the program switch.cpp using if and else if statements rather than a switch statement.<br>
     Did you use a trailing else in your new version?<br>
     If so, what did it correspond to in the original program with the switch statement?</p>
-<pre><code>// This program illustrates the use of the switch statement.
+<pre><code class="cpp">// This program illustrates the use of the switch statement.
 
 #include 《iostream》
 using namespace std;
@@ -1164,7 +1164,7 @@ TCP1101 Programming Fundamentals
 Please input your water bill for quarter 4:
 125
 Your average monthly bill is $37.50. You are using a typical amount of water</pre></p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 #include 《iomanip》
 
 using namespace std;
@@ -1354,7 +1354,7 @@ Sample Run 4:
 How many shirts would you like ?
 -2
 Invalid Input: Please enter a nonnegative integer</pre></p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 #include 《iomanip》
 
 using namespace std;
@@ -1517,7 +1517,7 @@ Please input "Y" if you require room and board and "N" if you do not:
 Y
 Your total bill for this semester is $8000</pre>
     </p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 #include 《iomanip》
 
 using namespace std;

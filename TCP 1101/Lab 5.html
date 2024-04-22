@@ -40,7 +40,7 @@
 
 <h1>Exercise 1</h1>
 <p>This program is not user friendly. Run it a few times and explain why.</p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
     using namespace std;
     int main() {
         char letter = 'a';
@@ -126,7 +126,7 @@ It’s always a good practice to think from the user’s perspective when design
 
 <h1>Exercise 2</h1>
 <p>Add to the code so that the program is more user friendly.</p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
     using namespace std;
     
     int main()
@@ -283,7 +283,7 @@ The best solution often depends on the specific requirements and constraints of 
 
 <h1>Exercise 3</h1>
 <p>How would this code affect the execution of the program if the while loop is replaced by a do-while loop? Try it and see.</p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
     using namespace std;
     
     int main() {
@@ -454,7 +454,7 @@ The best solution often depends on the specific requirements and constraints of 
 </div>
 
 <h1>Exercise 4</h1>
-<pre><code>// This program illustrates the use of a sentinel in a while loop.
+<pre><code class="cpp">// This program illustrates the use of a sentinel in a while loop.
 // The user is asked for monthly rainfall totals until a sentinel
 // value of -1 is entered. Then the total rainfall is displayed.
 
@@ -486,7 +486,7 @@ int main() {
     
 </code></pre>
 <p>Complete the program above by filling in the code described in the statements so that it will perform the indicated task.</p>
-<pre><code>/ This program illustrates the use of a sentinel in a while loop.
+<pre><code class="cpp">/ This program illustrates the use of a sentinel in a while loop.
 // The user is asked for monthly rainfall totals until a sentinel
 // value of -1 is entered. Then the total rainfall is displayed.
 
@@ -715,7 +715,7 @@ So, the condition if (month == 1) checks if the user entered -1 as the first inp
 <input type="checkbox" id="accordion2" class="hidecontent"/>
 <label for="accordion2">Lab 5.2 - Working with the do-while Loop</label>
 <div class="content hidecontent">
-<pre><code>// This program displays a hot beverage menu and prompts the user to
+<pre><code class="cpp">// This program displays a hot beverage menu and prompts the user to
 // make a selection. A switch statement determines which item the user
 // has chosen. A do-while loop repeats until the user selects item E
 // from the menu.
@@ -787,7 +787,7 @@ int main() {
 <p>Fill in the indicated code to complete the above program.<br>
     Then compile and run the program several times with various inputs.<br>
     Try all the possible relevant cases and record your results.</p>
-<pre><code>// This program displays a hot beverage menu and prompts the user to
+<pre><code class="cpp">// This program displays a hot beverage menu and prompts the user to
 // make a selection. A switch statement determines which item the user
 // has chosen. A do-while loop repeats until the user selects item E
 // from the menu.
@@ -975,7 +975,7 @@ The best solution often depends on the specific requirements and constraints of 
 <h1>Exercise 2</h1>
 <p>What do you think will happen if you do not enter A, B, C, D or E?<br>
     Try running the program and inputting another letter.</p>
-<pre><code>
+<pre><code class="cpp">
     
 </code></pre>
 <div id="ouraccordion">
@@ -1061,7 +1061,7 @@ This is a common practice in C++ and many other programming languages to improve
 <input type="checkbox" id="accordion3" class="hidecontent"/>
 <label for="accordion3">Lab 5.3 - Working with the for Loop</label>
 <div class="content hidecontent">
-<pre><code>// This program has the user input a number n and then finds the
+<pre><code class="cpp">// This program has the user input a number n and then finds the
 // mean of the first n positive integers
 
 #include 《iostream》
@@ -1093,7 +1093,7 @@ int main() {
 What do you think will happen if it is removed? Modify the code and try it. Record what happens.<br>
 Make sure that you try both even and odd cases.<br>
 Now put <pre>static_cast(float)</pre> back in the program.</p>
-<pre><code>// This program has the user input a number n and then finds the
+<pre><code class="cpp">// This program has the user input a number n and then finds the
 // mean of the first n positive integers
 
 #include 《iostream》
@@ -1213,7 +1213,7 @@ This could lead to unexpected results and is why it’s important to validate us
 <h1>Exercise 3</h1>
 <p>Modify the code so that it computes the mean of the consecutive positive integers n, n+1, n+2, . . . , m, where the user chooses n and m.<br>
     For example, if the user picks 3 and 9, then the program should find the mean of 3, 4, 5, 6, 7, 8, and 9, which is 6.</p>
-<pre><code>// This program has the user input a number n and then finds the
+<pre><code class="cpp">// This program has the user input a number n and then finds the
 // mean of the first n positive integers
 
 #include 《iostream》
@@ -1357,7 +1357,7 @@ The best solution often depends on the specific requirements and constraints of 
 <input type="checkbox" id="accordion4" class="hidecontent"/>
 <label for="accordion4">Lab 5.4 - Nested Loop</label>
 <div class="content hidecontent">
- <pre><code>// This program finds the average time spent programming by a student
+ <pre><code class="cpp">// This program finds the average time spent programming by a student
 // each day over a three day period.
 
 #include 《iostream》
@@ -1406,7 +1406,7 @@ Please enter the number of hours worked by student 2 on day 1.
 Please enter the number of hours worked by student 2 on day 2.
 13
 The average number of hours per day spent programming by student 2 is 11</pre></p>
-<pre><code>// This program finds the average time spent programming by a student
+<pre><code class="cpp">// This program finds the average time spent programming by a student
 // each day over a three day period.
 
 #include 《iostream》
@@ -1529,7 +1529,7 @@ But if the number of days can vary for each student, your version would be more 
 <p>Modify the program from Exercise 1 so that it also finds the average number of hours per day that a given student studies biology as well as programming.<br>
     For each given student include two prompts, one for each subject.<br>
     Have the program print out which subject the student, on average, spent the most time on.</p>
-<pre><code>// This program finds the average time spent programming by a student
+<pre><code class="cpp">// This program finds the average time spent programming by a student
 // each day over a three day period.
 
 #include 《iostream》
@@ -1676,7 +1676,7 @@ But if the number of days can vary for each student, your version would be more 
 <input type="checkbox" id="accordion5" class="hidecontent"/>
 <label for="accordion5">Lab 5.5 - Reading and Writing to a File</label>
 <div class="content hidecontent">
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from a data file and the output will go to
 // an output file.
@@ -1709,7 +1709,7 @@ int main() {
     Create a data file called transaction.dat that has the following information:
 <pre>22
 10.98</pre></p>
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from a data file and the output will go to
 // an output file.
@@ -1836,7 +1836,7 @@ Choose the version that best suits your project and target audience, ensuring co
 <p>Fill in the blank and the statements that will read the data from the
     file and print the following to bill.out :
     <pre>The total bill is $241.56</pre></p>
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from a data file and the output will go to
 // an output file.
@@ -1983,7 +1983,7 @@ To integer b ( b must be greater than or equal to a ) :
 211 223 227 229 233 239 241 251 257 263 269 271 277 281 283 293 
 307 311 313 317 331 337 347 349 353 359 367 373 379 383 389 397
 78 prime numbers.</pre></p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 #include 《cmath》
 using namespace std;
 
@@ -2054,7 +2054,7 @@ int main() {
     2. Tea<br>
     3. Coke<br>
     4. Orange Juice</p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 using namespace std;
 
 int main() {
@@ -2149,7 +2149,7 @@ int main() {
     Write a program that asks the user to input the number of seconds that the watermelon falls and the height h of the bridge above the water.<br>
     The program should then calculate the distance fallen for each second from t = 0 until the value of t input by the user.<br>
     If the total distance fallen is greater than the height of the bridge, then the program should tell the user that the distance fallen is not valid.</p>
-<pre><code>#include 《iostream》
+<pre><code class="cpp">#include 《iostream》
 #include 《cmath》
 using namespace std;
 
@@ -2225,7 +2225,7 @@ This program effectively calculates and displays the distance fallen, taking int
 <!-- these links to previous & next Labs -->
 <div class="container2">
     <button class="button-1"><a href="Lab 4.html" target="_blank">Lab 4</a></button>
-    <button class="button-1"><a href="" target="_blank">Lab 6</a></button>
+    <button class="button-1"><a href="Lab 6.html" target="_blank">Lab 6</a></button>
 </div>
 
 </body>

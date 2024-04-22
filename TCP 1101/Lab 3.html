@@ -35,7 +35,7 @@
     <input type="checkbox" id="accordion1" class="hidecontent"/>
     <label for="accordion1">Lab 3.1 - Working with the cin Statement</label>
     <div class="content hidecontent">
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from the keyboard and the output will go to the screen.
     
@@ -63,7 +63,7 @@ int main() {
       <h1>Exercise 1</h1>
       <p>Complete the program so that a sample run inputting 22 for the number of items bought and 10.98 for
         the price of each item will produce the results of $241.56.</p><br>
-<pre><code>
+<pre><code class="cpp">
 // This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from the keyboard and the output will go to the screen.
@@ -104,13 +104,13 @@ int main()
 </code></pre>
       <h1>Exercise 2</h1>
       <p>Once you have the program working, change the instruction:</p>
-        <pre><code>cout << setprecision (2) << fixed << showpoint;</code></pre>
+        <pre><code class="cpp">cout << setprecision (2) << fixed << showpoint;</code></pre>
         <p>to</P>
-        <pre><code>cout << setprecision(2) << showpoint;</code></pre>
+        <pre><code class="cpp">cout << setprecision(2) << showpoint;</code></pre>
       <p>Rerun the program with the same data given in Exercise 1 above and record your results. What do you
         think the fixed attribute in the cout statement does?</p><br>
 
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from the keyboard and the output will go to the screen.
 
@@ -196,7 +196,7 @@ This is particularly useful when dealing with monetary values, where we typicall
     <p>attribute in the cout statement does?<br>
     The attribute showpoint forces all floating point output to show a decimal point even if the values are
     whole numbers. In some environments this is done automatically.</p>
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
     // It will then print out the total price.
     // The input will come from the keyboard and the output will go to the screen.
     
@@ -284,7 +284,7 @@ but with showpoint, it would be printed as 5.0000 when using setprecision(4).
     the program first asks for the name of the product (which can be read into a string object).<br>
 Then, alter the program, if you have not already done so, so that the name of an item could include a
 space within its string.</p>
-<pre><code>// This program will read in the quantity of a particular item and its price.
+<pre><code class="cpp">// This program will read in the quantity of a particular item and its price.
 // It will then print out the total price.
 // The input will come from the keyboard and the output will go to the screen.
 
@@ -357,7 +357,7 @@ The output will include the product name along with the total bill.
         spaces.<br>
         We can use the formatted output from Lab 3.1 and the statement setw(n) where n is some integer
         to indicate the width to produce such tables.</p>
-    <pre><code>// This program will bring in two prices and two quantities of items
+    <pre><code class="cpp">// This program will bring in two prices and two quantities of items
 // from the keyboard and print those numbers in a formatted chart.
 
 #include iostream
@@ -398,7 +398,7 @@ PRICE QUANTITY
 1.95  8
 10.89 9</pre>
 
-<pre><code>// This program will bring in two prices and two quantities of items
+<pre><code class="cpp">// This program will bring in two prices and two quantities of items
 // from the keyboard and print those numbers in a formatted chart.
 
 #include iostream
@@ -521,7 +521,7 @@ This statement is similar to the previous one, but it’s used to print the seco
     <input type="checkbox" id="accordion3" class="hidecontent"/>
     <label for="accordion3">Lab 3.3 - Arithmetic Operations and Math Functions</label>
     <div class="content hidecontent">
-<pre><code>// This program will input the value of two sides of a right triangle and then
+<pre><code class="cpp">// This program will input the value of two sides of a right triangle and then
 // determine the size of the hypotenuse.
 
 #include cmath  // needed for math functions like sqrt()
@@ -548,7 +548,7 @@ int main() {
 
 The sides of the right triangle are 9 and 3
 The hypotenuse is 9.48683</pre></p>
-    <pre><code>// This program will input the value of two sides of a right triangle and then
+    <pre><code class="cpp">// This program will input the value of two sides of a right triangle and then
 // determine the size of the hypotenuse.
 
 #include iostream
@@ -633,7 +633,7 @@ The hypotenuse is 9.49</pre>
         You must include another directive as well as use the formatted
         features discussed in the earlier labs of this lesson.<br>Notice that the change is made only to the value of
         the hypotenuse and not to the values of 9 and 3.</p>
-    <pre><code>// This program will input the value of two sides of a right triangle and then
+    <pre><code class="cpp">// This program will input the value of two sides of a right triangle and then
 // determine the size of the hypotenuse.
 
 #include iostream
@@ -701,7 +701,7 @@ The return 0; statement indicates that the program has finished running successf
     <input type="checkbox" id="accordion4" class="hidecontent"/>
     <label for="accordion4">Lab 3.4 - Working with Type Casting</label>
     <div class="content hidecontent">
-<pre><code>// This program will determine the batting average of a player.
+<pre><code class="cpp">// This program will determine the batting average of a player.
 // The number of hits and at bats are set internally in the program.
 
 #include <iostream>
@@ -728,7 +728,7 @@ int main() {
         Does changing the data type of batavg from int to float solve the problem?<br>
         Make that change and run the program again and record the result.<br><br>
         The batting average is __________ ?</p>
-    <pre><code>// This program will determine the batting average of a player.
+    <pre><code class="cpp">// This program will determine the batting average of a player.
 // The number of hits and at bats are set internally in the program.
 
 #include iostream
@@ -776,7 +776,7 @@ The batting average will now output as 0.29216.
     <p>Continue to work with this program until you get the correct result. The correct result should be
         0.292162. Do not change the data type of the two named constants. Instead, use a typecast to solve the
         problem.</p>
-    <pre><code>
+    <pre><code class="cpp">
         
     </code></pre>
     <div id="ouraccordion">
@@ -817,7 +817,7 @@ Please input the second grade
 Please input the third grade
 95
 The average of the three grades is 96.77</pre></p>
-    <pre><code>#include iostream
+    <pre><code class="cpp">#include iostream
 #include iomanip
 
 using namespace std;
@@ -919,7 +919,7 @@ The total sales of American Colonial chairs $1700.00
 The total sales of modern chairs $862.50
 The total sales of French Classical chairs $638.75
 The total sales of all chairs $3201.25</pre></p>
-    <pre><code>
+    <pre><code class="cpp">
 #include iostream
 #include iomanip // for setprecision
 
@@ -962,7 +962,7 @@ int main() {
         <label for="accordionx27">Explanation (Gemini)</label>
         <div class="content hidecontent">
     <pre>
-<code>#include iostream
+<code class="cpp">#include iostream
 #include iomanip
 
 using namespace std;
@@ -1227,7 +1227,7 @@ The Total sales for the month is $1080.00
 Total sales without tax is $1000.00
 The State tax for the month is $60.00
 The Local tax for the month is $20.00</pre></p>
-    <pre><code>#include iostream
+    <pre><code class="cpp">#include iostream
 #include iomanip
 
 using namespace std;
