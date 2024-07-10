@@ -159,12 +159,14 @@ var countDownDate3 = new Date("5 Jul, 2024 00:00:00").getTime();
 var countStartDate3 = new Date("25 Mar, 2024 00:00:00").getTime();
 createCountdown(countDownDate3, countStartDate3, "countdown-container-3");
 
-*/
+
 
 // Example usage for countdown 4
 var countDownDate4 = new Date("9 Jul, 2024, 09:00:00").getTime();
 var countStartDate4 = new Date("24 Jun, 2024, 00:00:00").getTime();
 createCountdown(countDownDate4, countStartDate4, "countdown-container-4");
+
+*/
 
 // Example usage for countdown 5
 var countDownDate5 = new Date("11 Jul, 2024, 09:00:00").getTime();
