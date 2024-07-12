@@ -143,6 +143,18 @@ function createCountdown(countDownDate, countStartDate, containerId) {
   }, 10);
 }
 
+// Function to show the disclaimer
+function showDisclaimer() {
+    var disclaimer = document.getElementById('disclaimer');
+    disclaimer.style.display = 'block';
+}
+
+// Function to close the disclaimer
+function closeDisclaimer() {
+    var disclaimer = document.getElementById('disclaimer');
+    disclaimer.style.display = 'none';
+}
+
 // Example usage:
 var countDownDate1 = new Date("12 Aug, 2024 00:00:00").getTime();
 var countStartDate1 = new Date("25 Mar, 2024 00:00:00").getTime();
@@ -152,7 +164,6 @@ var countDownDate2 = new Date("5 Nov, 2024 00:00:00").getTime();
 var countStartDate2 = new Date("25 Mar, 2024 00:00:00").getTime();
 createCountdown(countDownDate2, countStartDate2, "countdown-container-2");
 
-/*
 
 // Example usage for countdown 3
 var countDownDate3 = new Date("5 Jul, 2024 00:00:00").getTime();
@@ -160,13 +171,11 @@ var countStartDate3 = new Date("25 Mar, 2024 00:00:00").getTime();
 createCountdown(countDownDate3, countStartDate3, "countdown-container-3");
 
 
-
 // Example usage for countdown 4
 var countDownDate4 = new Date("9 Jul, 2024, 09:00:00").getTime();
 var countStartDate4 = new Date("24 Jun, 2024, 00:00:00").getTime();
 createCountdown(countDownDate4, countStartDate4, "countdown-container-4");
 
-*/
 
 // Example usage for countdown 5
 var countDownDate5 = new Date("11 Jul, 2024, 09:00:00").getTime();

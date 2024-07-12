@@ -491,3 +491,28 @@ header.sticky{
 		transition: .2s;
 	}
 }
+
+.disclaimer {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #555;
+}
