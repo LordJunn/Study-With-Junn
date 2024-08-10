@@ -156,7 +156,7 @@ function closeDisclaimer() {
 }
 
 // Example usage:
-var countDownDate1 = new Date("12 Aug, 2024 00:00:00").getTime();
+var countDownDate1 = new Date("5 Nov, 2024 00:00:00").getTime();
 var countStartDate1 = new Date("25 Mar, 2024 00:00:00").getTime();
 createCountdown(countDownDate1, countStartDate1, "countdown-container-1");
 
