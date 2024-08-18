@@ -1,0 +1,255 @@
+html {
+scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+margin: 0;
+padding: 0; 
+box-sizing: inherit;
+} 
+
+body {
+box-sizing: border-box; 
+font: 17px 'Alata', sans-serif;
+background: #f5f5f5; 
+color: #555;
+} 
+
+ul {
+list-style-type: none;
+}
+
+a {
+text-decoration: none;
+}
+
+h1, h2, h3 { 
+font: 35px 'Ibarra Real Nova', serif;
+}
+
+/* Base Styles */
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  border-bottom: 2px solid #8c00ff;
+}
+
+nav .logo-holder a {
+  color: #34495e;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Title that's on the header */
+nav .title {
+  font-size: clamp(1rem, 2.5vw, 3rem); /* min, ok, max otherwise choose 30px */
+  color: #4a0099ae;
+  font-weight: bold;  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Menu Styles */
+nav ul.dropdown {
+  display: flex;
+  list-style: none;
+}
+
+nav ul.dropdown li {
+  padding: 15px;
+  border-right: 1px solid #cec4c1;
+}
+
+nav ul.dropdown li:last-child {
+  border-right: none;
+}
+
+nav ul.dropdown li a {
+  color: #34495e;
+  text-decoration: none;
+}
+
+nav ul.dropdown li a:hover {
+  color: #1abc9c;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle .menu-text {
+  display: none;
+}
+
+/* Hide .logo-holder on mobile and incorporate its content into the menu toggle button */
+@media (max-width: 768px) {
+  nav .logo-holder {
+    display: none;
+  }
+
+  nav .title {
+    text-align: left; /* Align title to the left on mobile view */
+    padding-left: 15px; /* Optional: add padding to align the title away from the edge */
+    flex: 1;
+  }
+
+  nav ul.dropdown {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: #fff;
+    border: 1px solid #cec4c1;
+  }
+
+  nav ul.dropdown.show {
+    display: flex;
+  }
+
+  nav ul.dropdown li {
+    padding: 10px;
+    border-right: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle .menu-text {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  /* Show 'Back to home' link on mobile view only */
+  nav ul.dropdown li.show-on-mobile {
+    display: block;
+  }
+}
+
+/* Hide 'Back to home' link on desktop view only */
+@media (min-width: 768px) {
+  nav ul.dropdown li.show-on-mobile {
+    display: none;
+  }
+}
+
+/* styling container */ 
+.container {
+    margin: 50px auto 10px auto;
+    max-width: 1000px; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*  the boxes within the container */
+ .item {
+ width: 30%; 
+ margin-bottom: 4%;
+ position: relative;
+ background: #fff;
+ border-radius: 10px;
+ box-shadow: 0 0 20px #c2c3c3; 
+ border: 1px solid #10a0b6;
+ padding: 20px 20px 30px 20px;
+ }
+
+ 
+ /* the outlined small box */ 
+ .item::before { 
+    background: #10a0b6; 
+    width: 43px;
+    height: 38px; 
+    content: 'M'; 
+    position: absolute; 
+    Left: -20px; 
+    color: #fff;  
+    border-radius: 0 19px 19px 0;
+    text-align: center;  
+    Line-height: 38px;   
+}
+
+/* making the boxes responsive */ 
+@media screen and (max-width: 600px) { 
+    .container {
+    justify-content: center;
+    }
+    .item {
+    width: 80%; 
+    min-width: 320px;
+    }
+}
+
+/* styling the box content */
+
+h1 {
+    padding: 0 0 15px 25px; 
+    font: 35px;
+    } 
+
+    h1 a {
+    color: #18a0b6;
+    } 
+    
+    .text-holder {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+    } 
+
+li {
+    padding: 0 0 15px 25px; 
+    font: 15px;
+    }
+
+    li a {
+        color: #18a0b6;
+    } 
+
+    /* rows and links */
+   
+.links {
+padding: 15px 0 0;
+} 
+
+ol {
+    padding-left: 20px;
+}
+
+.rows {
+display: flex;
+justify-content: space-between; 
+padding: 0 0 10px;
+}
+
+.rows h3 {
+font: 16px verdana, sans-serif;       
+font-weight: 300;
+} 
+
+.rows a {
+color: #10a0b6;
+}
+
+.rows a:hover {
+text-decoration: underline; 
+}
+
+.rows a::after { 
+content: '>>';
+padding: 0 0 3px;
+}
