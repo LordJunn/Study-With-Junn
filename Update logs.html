@@ -9,7 +9,8 @@ body {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
+  margin: 0 20px; /* 20px margin on left and right, no margin on top and bottom */
 }
 
 th, td {
@@ -26,7 +27,7 @@ th {
 }
 
 .special {
-  font-size: 20px;
+  font-size: 30px;
   color: #7332ff
 }
 
@@ -51,7 +52,6 @@ img {
 .button:hover {
   background-color: #0056b3;
 }
-
 
 </style>
 </head>
@@ -1274,11 +1274,6 @@ img {
           <li><a href="TSN 1101.html">TSN 1101</a></li> 
         </ul>
         Added a span class for smol to replace using small.
-        <pre><code> span class="smol" 
-          .smol {
-            font-size: 10px
-          }
-        </code></pre>
       </td>
     </tr>
     <tr>
@@ -1286,8 +1281,7 @@ img {
       <td> 
         <span class="special"><u>Top 2 changes today are suggested by Sycanz:</u></span><br><br>
 
-        Added subject.css into the CSS folder, which is used to style subjects instead of incorporating everything into 1 Main.css.<br>
-        Functionalities: <!-- the new css part is my idea in case i messed up -->
+        New stuff for subject home pages:
         <ul>
           <li>Hiding subject codes into a menu, along with a back to home link to reduce clutter on mobile.</li>
           <li>Hiding the title whenever on mobile, but displays on desktop to reinforce point 1.</li>
@@ -1301,9 +1295,15 @@ img {
         <ul>
           <li><a href="TSN 1101.html">TSN 1101</a></li> 
         </ul>     
+        <br><br>
+
+        <span class="special"><u>And now for changes that isn't his idea:</u></span><br><br>
+
+        Added subject.css into the CSS folder, which is used to style subjects instead of incorporating everything into 1 Main.css in case of conflicts.<br>
+        Added a span class for special text.<br>
+        Added a button in Update logs to go back to index, along with the necessary CSS.<br>
+        Added subject.js into the JS folder, which is used to style subjects instead of incorporating everything into 1 script.js due to conflicts.<br>
         
-        <span class="smol">And now for changes that isn't his.</span><br>
-        Added a button in Update logs to go back to index, along with the necessary CSS.
       </td>
     </tr>
     <tr>
