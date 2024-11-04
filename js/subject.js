@@ -14,14 +14,3 @@ window.addEventListener("scroll", function() {
     });
   });
   
-  document.addEventListener('DOMContentLoaded', function() {
-  
-    // Dropdown Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const dropdownMenu = document.querySelector('ul.dropdown');
-  
-    menuToggle.addEventListener('click', function() {
-      dropdownMenu.classList.toggle('show');
-    });
-  });
-  
