@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Credits</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+
+    <style>
+        /* Insert the CSS you've shared here */
+        h2 {
+            font-size: var(--big-font);
+        }
+
+        /* Override the default background for the home section */
+        .home {
+            background: url("css/GakkouGurashi.png") no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image path */
+            height: 100vh; /* Ensure the section takes full height */
+        }
+    
+        /* Accordion container styling */
+        #credit {
+            padding: 20px 10%;
+            margin-top: 50px;
+        }
+
+        /* Accordion box styling */
+        .container-box {
+            background: var(--bg-color);
+            border: 1px solid #f0eded;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container-box h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .container-box p, .container-box ul {
+            font-size: 15px;
+            color: var(--second-color);
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .container-box ul {
+            list-style-type: disc;
+        }
+
+        .container-box:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container-box .content {
+            display: none;
+            padding-top: 10px;
+        }
+
+        .container-box.open .content {
+            display: block;
+        }
+
+        .container-box.open h4 {
+            color: var(--main-color);
+        }
+
+        .container-box .toggle-button {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--main-color);
+            text-align: right;
+            cursor: pointer;
+            padding-top: 10px;
+        }
+
+        /* Additional styling for icons or "open/close" buttons */
+        .blu {
+            color: blueviolet;
+        }
+
+    </style>
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+	<header>
+		<a href="#" class="logo">Kredit</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="https://lordjunn.github.io/Study-With-Junn/index.html">Study</a></li>
+			<li><a href="https://lordjunn.github.io/Food-MMU/index.html">Dine</a></li>
+			<li><a href="https://junn-blogging.web.app/blog.html">Blog</a></li>
+			<li><a href="https://lordjunn.github.io/Triple-Baka/index.html">Game</a></li>
+		</ul>
+	</header>
+
+	<!--Home section--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<h1>Credits</h1>
+			<p>Would you like to know what X helped me in Y?<br>
+            This is the place!</p>
+			<a href="#credit" class="home-btn">Let's go now</a>
+		</div>
+	</section>
+
+    <!-- Main Section for Credits -->
+    <!-- Main Section for Credits with Accordion Feature -->
+    <section id="credit"><br>
+
+        <div class="container-box">
+            <h4>Supporters</h4>
+            <div class="toggle-button"></div>
+        
+                <p>Special thanks to the following donators for their funding!</p>
+                <ul>
+                    <li><span class="blu">BadSpider1</span> - 6$ (Monthly since 29 Aug)</li>
+                </ul>
+    
+        </div>
+
+    <h2>General</h2>
+
+
+
+        <div class="container-box">
+            <h4>Website Design and Development</h4>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                <p>Developed and designed by me. This website is built with modern web technologies like HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+
+        <div class="container-box">
+            <h4>Logo Design</h4>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                <p>Huh what logo.</p>
+            </div>
+        </div>
+
+        <div class="container-box">
+            <h4>Images</h4>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                <p>Images on this site are provided by me.<br>
+                Every. Single. One. of the exam related ones that is.<br><br>
+            
+                Anime images are from their respective animes. Will probably create a doc for them later.</p>
+            </div>
+        </div>
+
+        <div class="container-box">
+            <h4>Fonts</h4>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                <p>Fonts used on this site are from Google Fonts, including <span class="blu">Poppins</span> and <span class="blu">Paytone One</span>.<br>
+                Actual response: I forgor</p>
+            </div>
+        </div>
+
+        <div class="container-box">
+            <h4>Additional Contributions</h4>
+            <p>Special thanks to the following contributors for their valuable input, be it physically, mentally or another way:</p>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                
+                <ul>
+                    <li>Silence...</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="container-box">
+            <h4>Credits for Libraries</h4>
+            <div class="toggle-button">+</div>
+            <div class="content">
+                <p>We'd like to credit the following libraries and frameworks used in this project:</p>
+                <ul>
+                    <li><span class="blu">What's a Framework</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+	<!--footer--->
+	<section id="contact">
+		<div class="footer">
+			<div class="main">
+				<div class="list">
+					<h4>Site Links</h4>
+					<ul>
+                        <li><a href="https://lordjunn.github.io/Study-With-Junn/index.html">Study</a></li>
+                        <li><a href="https://lordjunn.github.io/Food-MMU/index.html">Dine</a></li>
+                        <li><a href="https://junn-blogging.web.app/blog.html">Blog</a></li>
+                        <li><a href="https://lordjunn.github.io/Triple-Baka/index.html">Game</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Contact Info</h4>
+					<ul>
+						<li><a href="https://t.me/+ZV9kArSUzw9kMTU9">Telegram Group</a></li>
+						<li><a href="https://ko-fi.com/lordjunn">Ko-fi</a></li>
+						<li><a href="https://discord.gg/M9XDKbT7hc">Discord Server</a></li>
+						<li><a href="https://lordjunn.carrd.co">Carrd</a></li>
+						<li><a href="https://lordjunn.github.io/Food-MMU/">Github</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Extras</h4>
+					<ul>
+						<li><a href="#" onclick="showDisclaimer(); return false;">Disclaimer</a></li>
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Connect</h4>
+					<div class="social">
+						<a href="https://junn-blogging.web.app/blog.html"><i class='bx bxl-blogger' ></i></a>						
+						<a href="https://t.me/+ZV9kArSUzw9kMTU9"><i class='bx bxs-paper-plane' ></i></a>
+						<a href="https://discord.gg/M9XDKbT7hc"><i class='bx bxl-discord-alt' ></i></a>
+						<a href="https://ko-fi.com/lordjunn"><i class='bx bx-dollar' ></i></a>	
+						<br><br>
+						
+					</div> 
+				</div>
+			</div>
+		</div>
+
+		<div class="end-text">
+			<p>Copyright © 2023 - 2025 All rights reserved | Last updated <a href="Update logs.html">7 Nov 2024</a>   </p>
+		</div>
+	</section>
+
+	<!--link to js--->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Disclaimer Popup -->
+    <div class="disclaimer">
+        <span class="close">&times;</span>
+        <p>This website uses cookies to improve your experience.</p>
+    </div>
+
+    <script>
+        // Add interactivity for the disclaimer
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.disclaimer').style.display = 'none';
+        });
+
+        const accordions = document.querySelectorAll('.container-box');
+
+        accordions.forEach(accordion => {
+            const toggleButton = accordion.querySelector('.toggle-button');
+            toggleButton.addEventListener('click', () => {
+                accordion.classList.toggle('open');
+                const content = accordion.querySelector('.content');
+                const isOpen = accordion.classList.contains('open');
+                toggleButton.textContent = isOpen ? '-' : '+';
+            });
+        });
+
+    </script>
+</body>
+</html>
