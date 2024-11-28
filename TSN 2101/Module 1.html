@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+
+<body>
+  <header id="top">
+    <nav>
+      <div class="logo-holder"><a href="../index.html">Study with Junn</a></div>
+      <h4>TSN 2101 - Introduction to Operating Systems</h4>
+      <button class="menu-toggle" id="menu-toggle">
+        <span class="menu-text">☰</span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="../index.html#Courses">Courses</a></li>
+        <li><a href="">Topic List</a></li>
+        <li><a href="../index.html#top">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- #end of header -->
+<br><br><br>
+
+
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+        <h1>Question 1</h1>
+
+<pre><span style="color: blue;">What is the purpose of booting in a computer? When does it start?</span>
+    
+The purpose of booting is to load the kernel from secondary storage to primary memory and
+initialize the registers, memory and I/O devices and their controllers. After the booting the O/S is
+ready to accept commands and to provide services to application programs and users.
+
+The booting starts when you switch on the power or resets the computer.
+
+</pre>
+    
+        <br><br><h1>Question 2</h1>
+<pre><span style="color: blue;">What are the three main purposes of an operating system?</span>
+
+• To provide an environment for a computer user to execute programs on computer hardware
+in a convenient and efficient manner.
+
+• To allocate the separate resources of the computer as needed to solve the problem given.
+The allocation process should be as fair and efficient as possible.
+
+• As a control program it serves two major functions: (1) supervision of the execution of user
+programs to prevent errors and improper use of the computer, and (2) management of the
+operation and control of I/O devices.
+
+</pre>
+    
+        <br><br><h1>Question 3</h1>
+<pre><span style="color: blue;">What are the resources of a computer? Why is the O/S called a resource allocator?</span>
+
+Resources of a computer are CPU cycles, memory space, file storage space, I/O devices, and so
+on. The operating system acts as the manager of these resources. Facing numerous and possibly
+conflicting requests for resources, the operating system must decide how to allocate them to
+specific programs and users so that it can operate the computer system efficiently and fairly.
+
+</pre>
+
+        <br><br><h1>Question 4</h1>
+<pre><span style="color: blue;">List the four steps that are necessary to run a program on a completely dedicated machine—a computer that is running only that program.</span>
+
+• Reserve machine time.
+• Manually load program into memory.
+• Load starting address and begin execution.
+• Monitor and control execution of program from console.
+
+</pre>
+    
+        <br><br><h1>Question 5</h1>
+<pre><span style="color: blue;">How does the distinction between kernel mode and user mode function as a rudimentary form of protection (security) system?</span>
+        
+The distinction between kernel mode and user mode provides a rudimentary form of protection
+in the following manner. Certain instructions could be executed only when the CPU is in kernel
+mode. Similarly, hardware devices could be accessed only when the program is executing in kernel
+mode. Control over when interrupts could be enabled or disabled is also possible only when the
+CPU is in kernel mode. Consequently, the CPU has very limited capability when executing in user
+mode, thereby enforcing protection of critical resources.
+
+</pre>
+    
+        <br><br><h1>Question 6</h1>
+<pre><span style="color: blue;">What is the purpose of interrupts? What are the differences between a trap and an interrupt? 
+Can traps be generated intentionally by a user program? If so, for what purpose?</span>
+
+An interrupt is a hardware-generated change of flow within the system. An interrupt handler is
+summoned to deal with the cause of the interrupt; control is then returned to the interrupted
+context and instruction. A trap is a software-generated interrupt. An interrupt can be used to
+signal the completion of an I/O to obviate the need for device polling. A trap can be used to call
+operating system routines or to catch arithmetic errors.
+
+</pre>
+    
+        <br><br><h1>Question 7</h1>
+<pre><span style="color: blue;">Which of the following instructions should be privileged?</span>
+
+The following operations need to be privileged: 
+• Set value of timer
+• Clear memory
+• Turn off interrupts
+• Modify entries in device-status table
+• Access I/O device
+The rest can be performed in user mode.
+
+</pre>
+    
+        <br><br><h1>Question 8</h1>
+<pre><span style="color: blue;">Describe the differences between symmetric and asymmetric multiprocessing.
+What are three advantages and one disadvantage of multiprocessor systems?</span>
+
+Symmetric multiprocessing treats all processors as equals, and I/O can be processed on any CPU.
+Asymmetric multiprocessing has one master CPU and the remainder CPUs are slaves. The master
+distributes tasks among the slaves, and I/O is usually done by the master only. Multiprocessors
+can save money by not duplicating power supplies, housings, and peripherals. They can execute
+programs more quickly and can have increased reliability. They are also more complex in both
+hardware and software than uniprocessor systems.
+
+</pre>
+    
+        <br><br><h1>Question 9</h1>
+<pre><span style="color: blue;">Direct memory access is used for high-speed I/O devices in order to avoid increasing the CPU’s execution load.</span>
+
+The CPU is allowed to execute other programs while the DMA controller is transferring data.
+The CPU can initiate a DMA operation by writing values into special registers that can be
+independently accessed by the device. The device initiates the corresponding operation once it
+receives a command from the CPU.
+When the device is finished with its operation, it interrupts the CPU to indicate the completion
+of the operation. Both the device and the CPU can be accessing memory simultaneously. The
+memory controller provides access to the memory bus in a fair manner to these two entities. A
+CPU might therefore be unable to issue memory operations at peak speeds since it has to
+compete with the device in order to obtain access to the memory bus.
+
+</pre>
+
+    
+        <br><br><h1>Question 10</h1>
+<pre><span style="color: blue;">Give two reasons why caches are useful. What problems do they solve? What problems do they cause? 
+If a cache can be made as large as the device for which it is caching (for instance, a cache as large as a disk), why not make it that large and eliminate the device?</span>
+
+• Caches are useful when two or more components need to exchange data, and the
+components perform transfers at differing speeds.
+• Caches solve the transfer problem by providing a buffer of intermediate speed between the
+components. If the fast device finds the data it needs in the cache, it need not wait for the
+slower device.
+• The data in the cache must be kept consistent with the data in the components. If a
+component has a data value change, and the datum is also in the cache, the cache must also
+be updated. This is especially a problem on multiprocessor systems where more than one
+process may be accessing a datum.
+• A component may be eliminated by an equal-sized cache, but only if: (a) the cache and the
+component have equivalent state-saving capacity (that is, if the component retains its data
+when electricity is removed, the cache must retain data as well), and (b) the cache is
+affordable, because faster storage tends to be more expensive.
+
+</pre>
+    
+        <br><br><h1>Question 11</h1>
+<pre><span style="color: blue;">Consider an SMP system similar to what is shown below. 
+Illustrate with an example how data residing in memory could in fact have two different values in each of the local caches.</span>
+
+Say processor 1 reads data A with value 5 from main memory into its local cache. Similarly,
+processor 2 reads data A into its local cache as well. Processor 1 then updates A to 10.
+However, since A resides in processor 1’s local cache, the update only occurs there and not in the local cache for processor 2.
+
+</pre>
+<img src="Images/C1/TSN 2101, C1, image 11.png">
+    
+        <br><br><h1>Question 12</h1>
+<pre><span style="color: blue;">What do you mean by a BUS organized computer?</span>
+
+In a digital computer, CPUs and multiple device controllers are connected through a common bus,
+called system bus, to shared memory. For this reason, it is called a bus-organized computer.
+
+</pre>
+    
+        <br><br><h1>Question 13</h1>
+<pre><span style="color: blue;">Describe briefly about memory hierarchy.</span>
+
+As the CPU Registers are very fast, memory should be compatible with them. Fast storage tends
+to be large, expensive, and power-hungry. We can use levels of increasingly large (and increasingly
+slow) storage, with the most likely information to be used soon stored at each level. Often the
+information at each larger level is a superset of the information stored at the next smaller level.
+Memory levels get slower and larger as they get farther from the processor.
+
+</pre>
+<img src="Images/C1/TSN 2101, C1, image 13.png">
+    
+        <br><br><h1>Question 14</h1>
+<pre><span style="color: blue;">Differentiate between the operating system models handling master-slave multiprocessors and symmetric multiprocessors.</span>
+In OS model handling master-slave multiprocessors, one copy of the operating system and its
+tables is present on CPU1 and not on any of the others. All system calls are redirected to CPU1 for
+processing. This model is called master-slave since CPU1 is the master and all the others are
+slaves.
+Advantages:
+• There is a single data structure that keeps track of ready processes. When a CPU goes idle, it
+asks the OS on CPU1 for a process to run and is assigned one. No overloading possible.
+• Pages can be allocated among all the processes dynamically.
+Disadvantage:
+• Since the master CPU must handle all system calls from all CPUs, the master will become a
+bottleneck with many CPUs in the system. This model is workable for small multiprocessors.
+
+In OS model handling symmetric multiprocessors, there is one copy of the Operating system in
+memory, but any CPU can run it. When a system call is made, the CPU on which the system call
+was made traps to the kernel and processes the system call.
+Advantages:
+• This model balances processes and memory dynamically, since there is only one set of OS
+tables.
+• This model eliminates the master CPU bottleneck.
+Disadvantage:
+• Synchronization problem may occur. Mutex (Lock) can be associated with the OS and when a
+CPU wants to run OS code, it must first acquire the mutex. If the mutex is locked, it just
+waits. Hence any CPU can run the OS, but only one at a time.
+
+</pre>
+<img src="Images/C1/TSN 2101, C1, image 14.png">
+    
+        <br><br><h1>Question 15</h1>
+<pre><span style="color: blue;">(i) State and briefly explain the four major reasons for building distributed Systems.</span>
+        
+Reasons for Building Distributed Systems:
+• Resource Sharing – To provide mechanisms for sharing files at remote sites, processing
+information in a distributed database, printing files at remote sites, using remote specialized
+hardware devices etc.
+• Computation Speedup – Partitioning the computation into sub-computations and running the
+sub-computations concurrently at different sites, moving jobs from an overloaded site to other
+lightly loaded sites (load sharing).
+• Reliability – If one site fails, other sites can continue operating, giving the system better
+reliability, and can also be achieved through redundancies in the resources, network, and OS
+services.
+• Communication – Several geographically distant sites can exchange information through
+message passing and higher-level functionalities such as file transfer, remote login, mail, and
+remote procedure call can be expanded to distributed systems.
+
+
+<span style="color: blue;">(ii) Reasons for Process Migration</span>
+
+• Load balancing – distribute processes across the network to even the workload.
+• Computation speedup – sub-processes can run concurrently on different sites and total
+process turnaround time can be reduced.
+• Hardware preference – process execution may require specialized processor.
+• Software preference – required software may be available at only a particular site.
+• Data access – run the process remotely, rather than transfer all data locally if numerous data
+are used in the computation.
+
+</pre>
+    </div>
+    
+</div>
+
+<script>
+    // JavaScript to toggle the menu visibility on smaller screens
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+<!-- 
+<h1>Questions  - </h1> 
+    <img src=""> 
+<h1>Questions  - </h1> 
+    <img src="">  
+<h1>Question </h1> 
+    <img src="">   
+-->
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="" target="_blank">Module </a></button>
+    <button class="button-1"><a href="" target="_blank">Module </a></button>
+</div>
+
+</body>
+</html>

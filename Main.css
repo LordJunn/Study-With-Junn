@@ -123,7 +123,15 @@ color: #1abc9c;
 h1 {
     padding: 0 0 15px 25px; 
     font: 35px;
-    } 
+    }
+    
+    p { /* this one for OS for some reason */
+      padding: 0 0 15px 35px; 
+    }
+
+    pre {
+      padding: 0 0 15px 35px;
+    }
 
     h1 a {
     color: #18a0b6;
