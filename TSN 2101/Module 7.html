@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 7</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Memory Management"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">Consider a system with 16MB of memory and fixed partitions, all of size 64KB, answer the following:</span>
+
+<b>a. Identify the minimum number of bits needed in an entry in the process table to record the partition to which a process has been allocated.</b>
+
+Number of partitions = 256 = 2^8  
+Number of bits needed to store one of 256 partition numbers = 8
+
+<b>b. Identify the number of bits in the limit register.</b>
+
+Partition addresses = 0 to 65535  
+Number of bits in the limit register = 16
+
+</pre>
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">Consider a memory with a contiguous allocation scheme consisting of 4 partitions of 600K, 400K, 500K, and 300K (in order) respectively. 
+Given a set of processes with 200K, 300K, 470K, and 500K (in order):</span>
+
+<b>a. Using first fit, how would you allocate the memory to them?</b>
+<b>b. Using best fit, how would you allocate the memory to them?</b>
+<b>c. Using worst fit, how would you allocate the memory to them?</b>
+<img src="Images/C7/TSN 2101, C7, image 2.png">
+
+</pre>
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">Consider a logical address space of sixty-four pages of 1024 words each mapped onto a physical memory of 32 frames.</span>
+
+<b>a. How many bits are there in the logical address?</b>
+
+Number of bits in the logical address = 16 (since 64 pages, each 1024 words, so log2(64) + log2(1024) = 6 + 10 = 16)
+
+<b>b. How many bits are there in the physical address?</b>
+
+Number of bits in the physical address = 15 (since 32 frames, each 1024 words, so log2(32) + log2(1024) = 5 + 10 = 15)
+
+</pre>
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">a. Consider a single-level paging system with the page table stored in memory. 
+Assume the usage of Translation Look-aside Buffer (TLB) with 70 percentage hit ratio, and also assume that it takes 30 nanoseconds to search the TLB and 200 nanoseconds to access memory. 
+Identify the effective memory access time.</span>
+
+Effective access time (single level paging system)  
+= 0.70 × (230 nanoseconds) + 0.30 × (430 nanoseconds)  
+= 161 + 129 = 290 nanoseconds
+
+<b>b. Repeat the above calculations for a two level paging system.</b>
+
+Effective access time (two level paging table)  
+= 0.70 × (230 nanoseconds) + 0.30 × (630 nanoseconds)  
+= 161 + 189 = 350 nanoseconds
+
+</pre>
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">On a simple paging system, Translation Lookaside Buffer (TLB) holds the most active page entries and the full page table is stored in the main memory.
+If reference to TLB takes 10 ns, and memory reference takes 180ns, identify the hit ratio to achieve an effective access time of 200ns.</span>
+
+If h is the hit ratio and p is the probability of references found in TLB, then  
+190p + (1-p) 370 = 200  
+190p + 370 – 370p = 200  
+370 – 200 = 370p – 190p  
+180p = 170  
+p = 170 / 180 = 0.9444  
+Hit ratio = h = 94.44%
+
+</pre>
+<br><br><h1>Question 6</h1>
+
+<pre><span style="color: blue;">Consider a computer system with a 32-bit logical address and 4-KB page size. 
+The system supports up to 512MB of physical memory. How many entries are there in each of the following?</span>
+
+<b>a. A conventional single-level page table</b>
+
+Number of pages = 2^20. Number of entries in a conventional single-level page table = 2^20.
+
+<b>b. An inverted page table</b>
+
+Number of frames = 2^17. Number of entries in an inverted page table = 2^17.
+
+</pre>
+<br><br><h1>Question 7</h1>
+
+<pre><span style="color: blue;">Identify the page numbers and offsets for the following address references (Given as decimal numbers). 
+Assume the page size is 1-KB.</span>
+
+<b>a. 19366</b>  
+Page 18, Offset 934  
+
+<b>b. 30000</b>  
+Page 29, Offset 304  
+
+<b>c. 256</b>  
+Page 0, Offset 256
+
+</pre>
+<br><br><h1>Question 8</h1>
+
+<pre><span style="color: blue;">Consider the following segment table:</span>
+
+Segment Base Length  
+0 219 600  
+1 2300 14  
+2 90 100  
+3 1327 580  
+4 1952 96  
+
+What are the physical addresses for the following logical addresses?  
+<b>a. 0, 430</b>  
+219 + 430 = 649  
+
+<b>b. 1, 10</b>  
+2300 + 10 = 2310  
+
+<b>c. 2, 500</b>  
+Illegal reference, trap to operating system  
+
+<b>d. 3, 400</b>  
+1327 + 400 = 1727  
+
+<b>e. 4, 112</b>  
+Illegal reference, trap to operating system
+
+</pre>
+<br><br><h1>Question 9</h1>
+
+<pre><span style="color: blue;">Consider a system that uses a two-level page table with page size of 4KB and 32-bit logical addresses. 
+The first 8 bits of the address serve as the index into the first-level page table.</span>
+
+<b>a. How many bits are needed to specify the second-level index?</b>
+
+32 - (12 + 8) = 12 bits
+
+<b>b. How many entries are in a level-one page table?</b>
+
+2^8 = 256 entries
+
+<b>c. How many entries are in a level-two page table?</b>
+
+2^12 = 4096 entries
+
+<b>d. How many pages are in the virtual address space?</b>
+
+2^20 (Each 2^8 level-one page table entry accesses a level-two page table with 2^12 entries,  
+2^8 × 2^12 = 2^20)
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 6.html" target="_blank">Module 6</a></button>
+    <button class="button-1"><a href="Module 8.html" target="_blank">Module 8</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 2</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Operating System Structures"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">What is the purpose of system calls?</span>
+
+System calls allow user-level processes to request services of the operating system. 
+
+</pre>
+
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">List five services provided by an operating system, and explain how each creates convenience for users. 
+In which cases would it be impossible for user-level programs to provide these services? Explain your answer.</span>
+
+    The five main services are, not inclusive of accounting, and protection and security:
+
+1. <b>Program execution</b>: 
+   The operating system loads the contents (or sections) of a file into memory and begins its execution. 
+   A user-level program could not be trusted to properly allocate CPU time.
+
+2. <b>I/O operations</b>: 
+   Disks, tapes, serial lines, and other devices must be communicated with at a very low level. 
+   The user need only specify the device and the operation to perform on it, while the system converts that request into device-specific commands. 
+   User-level programs cannot be trusted to access only devices they should have access to and to access them only when they are otherwise unused.
+
+3. <b>File-system manipulation</b>: 
+   File creation, deletion, allocation, and naming require many details that users should not have to handle. 
+   Blocks of disk space are used by files and must be tracked. 
+   Deleting a file requires removing the file name information and freeing the allocated blocks. 
+   User programs could neither ensure adherence to protection methods nor be trusted to allocate only free blocks and deallocate blocks on file deletion.
+
+4. <b>Communications</b>: 
+   Message passing between systems requires converting messages into packets, sending them to the network controller, 
+   transmitting across a communication medium, and reassembling by the destination system. 
+   Packet ordering and data correction must take place. 
+   User programs might not coordinate access to the network device or might receive packets destined for other processes.
+
+5. <b>Error detection</b>: 
+   At both hardware and software levels, data transfers and media must be inspected to ensure they have not been corrupted. 
+   Error detection at the hardware level and checking for consistency at the software level (e.g., allocation and unallocated blocks on a device) must be handled globally. 
+   User processes would not be able to handle all types of errors.
+
+</pre>
+
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">What is the purpose of system programs?</span>
+
+System programs can be thought of as bundles of useful system calls.
+They provide basic functionality to users, so that users do not need to write their own programs to solve common problems.
+
+</pre>
+
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">Describe three general methods for passing parameters to the operating system.</span>
+
+1. <b>Pass parameters in registers</b>: 
+   Parameters are passed directly in registers, which are fast to access.
+
+2. <b>Registers pass starting addresses of blocks of parameters</b>: 
+   In this method, registers are used to pass the starting addresses of larger parameter blocks, which the operating system will use.
+
+3. <b>Parameters placed on the stack</b>: 
+   Parameters can be pushed onto the stack by the program, and then popped off by the operating system when needed.
+
+</pre>
+
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">Would it be possible for the user to develop a new command interpreter using the system-call interface provided by the operating system?</span>
+
+Yes, it would be possible for the user to develop a new command interpreter using the system-call interface provided by the operating system. 
+The command interpreter allows a user to create and manage processes and determine ways for these processes to communicate (such as through pipes and files). 
+As all of these functionalities are accessible by a user-level program using system calls, it should be possible to develop a new command-line interpreter.
+
+</pre>
+
+<br><br><h1>Question 6</h1>
+
+<pre><span style="color: blue;">What is the main advantage of the microkernel approach to system design? 
+How do user programs and system services interact in a microkernel architecture? What are the disadvantages of using the microkernel approach?</span>
+
+<b>Advantages</b>:
+a. Adding a new service does not require modifying the kernel.  
+b. It is more secure as more operations are performed in user mode rather than kernel mode.  
+c. A simpler kernel design and functionality typically result in a more reliable operating system.
+
+<b>Interaction in microkernel architecture</b>:
+User programs and system services interact through interprocess communication mechanisms such as messaging, with messages conveyed by the operating system.
+
+<b>Disadvantages</b>:
+The main disadvantages of the microkernel architecture include the overheads associated with interprocess communication 
+and the frequent use of the operating system’s messaging functions, which can slow down the interaction between user processes and system services.
+
+</pre>
+
+<br><br><h1>Question 7</h1>
+
+<pre><span style="color: blue;">In what ways is the modular kernel approach similar to the layered approach? In what ways does it differ from the layered approach?</span>
+
+Both the modular kernel approach and the layered approach require subsystems to interact through carefully constructed interfaces that are typically narrow. 
+However, the layered kernel imposes a strict ordering of subsystems, where subsystems at lower layers cannot invoke operations from upper-layer subsystems. 
+In contrast, the modular kernel allows modules to invoke each other freely without any such restrictions.
+
+</pre>
+
+<br><br><h1>Question 8</h1>
+
+<pre><span style="color: blue;">What is the relationship between a guest operating system and a host operating system in a system like VMware? 
+What factors need to be considered in choosing the host operating system?</span>
+
+In a system like VMware, the guest operating system provides its services by mapping them onto the functionality provided by the host operating system. 
+When choosing the host operating system, it is important to consider whether its system-call interface is sufficiently general 
+to support the functionality of the guest operating system.
+
+</pre>
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 1.html" target="_blank">Module 1</a></button>
+    <button class="button-1"><a href="Module 3.html" target="_blank">Module 3</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

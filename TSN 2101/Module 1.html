@@ -6,29 +6,21 @@
 <link rel="stylesheet" href="../css/module.css">
 <link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>TSN 2101 - 1</title>
 </head>
 
 <body>
-  <header id="top">
-    <nav>
-      <div class="logo-holder"><a href="../index.html">Study with Junn</a></div>
-      <h4>TSN 2101 - Introduction to Operating Systems</h4>
-      <button class="menu-toggle" id="menu-toggle">
-        <span class="menu-text">☰</span>
-      </button>
-      <ul id="nav-menu">
-        <li><a href="../index.html#Courses">Courses</a></li>
-        <li><a href="">Topic List</a></li>
-        <li><a href="../index.html#top">Home</a></li>
-      </ul>
-    </nav>
-  </header>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Introduction to Operating Systems"
+     data-topic-link="../TSN 2101.html">
+</div>
 
 <!-- #end of header -->
 <br><br><br>
-
-
 <div id="myaccordion">
 	<input type="checkbox" id="accordion1" class="hidecontent"/>
 	<label for="accordion1">Questions from Textbook</label>
@@ -164,7 +156,8 @@ compete with the device in order to obtain access to the memory bus.
     
         <br><br><h1>Question 10</h1>
 <pre><span style="color: blue;">Give two reasons why caches are useful. What problems do they solve? What problems do they cause? 
-If a cache can be made as large as the device for which it is caching (for instance, a cache as large as a disk), why not make it that large and eliminate the device?</span>
+If a cache can be made as large as the device for which it is caching (for instance, a cache as large as a disk), 
+why not make it that large and eliminate the device?</span>
 
 • Caches are useful when two or more components need to exchange data, and the
 components perform transfers at differing speeds.
@@ -275,15 +268,7 @@ are used in the computation.
     
 </div>
 
-<script>
-    // JavaScript to toggle the menu visibility on smaller screens
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
 
-    menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('show');
-    });
-  </script>
 <!-- 
 <h1>Questions  - </h1> 
     <img src=""> 
@@ -295,9 +280,10 @@ are used in the computation.
 
 <!-- these links to previous & next modules -->
 <div class="container2">
-    <button class="button-1"><a href="" target="_blank">Module </a></button>
-    <button class="button-1"><a href="" target="_blank">Module </a></button>
+    <button class="button-1"><a href="Module 2.html" target="_blank">Module 2</a></button>
 </div>
+
+<script type="text/javascript" src="../js/module.js"></script>
 
 </body>
 </html>

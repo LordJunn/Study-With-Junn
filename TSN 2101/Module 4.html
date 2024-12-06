@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 4</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Process Scheduling"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">Why is it important for the scheduler to distinguish I/O-bound programs from CPU-bound programs?</span>
+
+I/O-bound programs perform only a small amount of computation before performing I/O operations. 
+These programs typically do not consume the entire CPU quantum. 
+On the other hand, CPU-bound programs use their entire quantum without performing blocking I/O operations. 
+By distinguishing between I/O-bound and CPU-bound programs, the scheduler can allocate higher priority to I/O-bound programs, 
+allowing them to execute ahead of CPU-bound programs, improving resource utilization and system responsiveness.
+
+</pre>
+
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">What is the difference between preemptive and non-preemptive scheduling?</span>
+
+<b>Preemptive scheduling</b> allows a process to be interrupted in the middle of its execution, taking the CPU away and allocating it to another process. 
+<b>Non-preemptive scheduling</b> ensures that a process relinquishes control of the CPU only when it has completed its current CPU burst.
+
+</pre>
+
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">Explain the difference in the degree to which the following scheduling algorithms discriminate in favor of short processes.</span>
+
+a) <b>FCFS (First Come, First Served)</b> – FCFS discriminates against short jobs since any short job arriving after long jobs will have to wait longer.
+
+b) <b>RR (Round Robin)</b> – RR treats all jobs equally by giving them equal CPU time (quantum). 
+As a result, short jobs will finish quicker since they will complete within their first CPU burst.
+
+</pre>
+
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">Consider the following set of processes with the length of the CPU-burst time given in milliseconds:</span>
+
+<b>Process</b> | <b>Burst-time</b> | <b>Arrival time</b>  
+P1      | 10         | 0  
+P2      | 2          | 1  
+P3      | 3          | 2  
+P4      | 1          | 3  
+P5      | 5          | 4  
+
+a) <span style="color: blue;">Draw the Gantt charts illustrating the execution of these processes using FCFS, Non-Preemptive SJF, 
+Preemptive SJF (Shortest Remaining Time First), and RR (quantum=2) scheduling.</span>
+
+<b>Gantt Charts:</b>
+<img src="Images/C4/TSN 2101, C4, image 4.png">
+
+
+b) <span style="color: blue;">What is the turnaround time of each process and also average turnaround time for each of the scheduling algorithms?</span>
+
+<b>Turnaround time = Finish Time - Arrival Time</b>
+
+| Process | FCFS | RR | Non-preemptive SJF  | Preemptive SJF |
+|---------|------|----|---------------------|----------------|
+| P1      | 10   | 21 | 10                  | 21             |
+| P2      | 11   | 3  | 12                  | 2              |
+| P3      | 13   | 10 | 14                  | 5              |
+| P4      | 13   | 6  | 8                   | 1              |
+| P5      | 17   | 15 | 17                  | 8              |
+
+<b>Average Turnaround Time:</b>
+- **FCFS:** 64/5 = 12.8ms
+- **RR:** 55/5 = 11ms
+- **Non-preemptive SJF:** 61/5 = 12.2ms
+- **Preemptive SJF:** 37/5 = 7.4ms
+
+c) <span style="color: blue;">What is the waiting time of each process and also average waiting time for each of the scheduling algorithms?</span>
+
+<b>Waiting Time = Turnaround Time - CPU Burst Time</b>
+
+| Process | FCFS | RR  | Non-preemptive SJF  | Preemptive SJF |
+|---------|------|-----|---------------------|----------------|
+| P1      | 0    | 11  | 0                   | 11             |
+| P2      | 9    | 1   | 10                  | 0              |
+| P3      | 10   | 7   | 11                  | 2              |
+| P4      | 12   | 5   | 7                   | 0              |
+| P5      | 12   | 10  | 12                  | 3              |
+
+<b>Average Waiting Time:</b>
+- **FCFS:** 43/5 = 8.6ms
+- **RR:** 34/5 = 6.8ms
+- **Non-preemptive SJF:** 40/5 = 8ms
+- **Preemptive SJF:** 16/5 = 3.2ms
+
+d) <span style="color: blue;">Which of the above scheduling algorithm results in the minimal average waiting time (over all processes)?</span>
+
+<b>Preemptive SJF</b> results in the minimal average waiting time.
+
+</pre>
+
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">Consider the following processes with the length of a CPU burst time given in milliseconds. Assume that lower numbers represent higher priority.</span>
+
+<b>Process</b> | <b>Arrival Time</b> | <b>Priority</b> | <b>Burst Time</b>  
+P0      | 0            | 2        | 8  
+P5      | 0            | 1        | 6  
+P1      | 4            | 5        | 15  
+P4      | 9            | 4        | 13  
+P2      | 7            | 3        | 9  
+P3      | 13           | 1        | 5
+
+a) <span style="color: blue;">Draw the Gantt Charts illustrating the execution of these processes using the following scheduling algorithms.</span>
+
+<b>Gantt Charts:</b>
+
+<img src="Images/C4/TSN 2101, C4, image 5.png">
+
+b) <span style="color: blue;">Calculate the average turnaround time and waiting time for all the above scheduling algorithms.</span>
+
+<b>Average Turnaround Time:</b>
+- **Non-preemptive SJF:** 131/6 = 21.83ms
+- **Preemptive SJF:** 131/6 = 21.83ms
+- **Non-preemptive Priority:** 131/6 = 21.83ms
+- **Preemptive Priority:** 135/6 = 22.5ms
+- **RR:** 199/6 = 33.17ms
+
+<b>Average Waiting Time:</b>
+- **Non-preemptive SJF:** 75/6 = 12.5ms
+- **Preemptive SJF:** 75/6 = 12.5ms
+- **Non-preemptive Priority:** 75/6 = 12.5ms
+- **Preemptive Priority:** 79/6 = 13.17ms
+- **RR:** 143/6 = 23.83ms
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 3.html" target="_blank">Module 3</a></button>
+    <button class="button-1"><a href="Module 5.html" target="_blank">Module 5</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

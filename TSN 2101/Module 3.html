@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 3</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Processes and Threads"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">What are the process elements in a process control block (PCB)?</span>
+
+At any given point in time, while a process is in execution, it can be uniquely characterized by a number of elements, known as process elements. 
+These elements are:
+
+- <b>Identifier</b>: A unique identifier associated with this process, distinguishing it from all other processes.
+- <b>State</b>: The current state of the process (e.g., running, waiting).
+- <b>Priority</b>: The priority level of the process relative to other processes.
+- <b>Program counter</b>: The address of the next instruction to be executed.
+- <b>Memory pointers</b>: Pointers to the program code and data, as well as memory blocks shared with other processes.
+- <b>Context data</b>: Data present in processor registers while the process is executing.
+- <b>I/O status information</b>: Information regarding outstanding I/O requests, assigned devices (e.g., tape drives), and files in use.
+- <b>Accounting information</b>: Data such as processor time used, time limits, account numbers, etc.
+
+</pre>
+
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">Draw the process state diagram depicting the five states that a process can be in.</span>
+
+The five states that a process can be in are:
+
+- <b>New</b>: The process is being created.
+- <b>Running</b>: Instructions are being executed.
+- <b>Waiting</b>: The process is waiting for some event to occur.
+- <b>Ready</b>: The process is ready and waiting to be assigned to a processor.
+- <b>Terminated</b>: The process has finished execution.
+
+</pre>
+<img src="Images/C3/TSN 2101, C3, image 2.png">
+
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">Describe the actions taken by a kernel to context-switch between processes.</span>
+
+When performing a context switch, the operating system must:
+
+- Save the state of the currently running process, including the values of all CPU registers and memory allocations.
+- Restore the state of the next process to be run.
+- Perform architecture-specific operations, such as flushing data and instruction caches.
+
+</pre>
+
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">Describe the differences among short-term, medium-term, and long-term scheduling.</span>
+
+- <b>Short-term (CPU scheduler)</b>: Selects jobs that are ready to execute from memory and allocates CPU time to them. 
+It operates frequently to select the next process to run.
+- <b>Medium-term</b>: Used primarily in time-sharing systems, this scheduler swaps processes in and out of memory to optimize system performance. 
+It is invoked less often than short-term scheduling.
+- <b>Long-term (job scheduler)</b>: Determines which jobs are brought into memory for processing. 
+This scheduler operates less frequently as it handles the placement of jobs in the system.
+
+</pre>
+
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">What resources are used when a thread is created? How do they differ from those used when a process is created?</span>
+
+When a thread is created, fewer resources are required compared to creating a process. Specifically:
+
+- <b>Thread creation</b>: Requires allocating a small data structure to hold the thread’s register set, stack, and priority.
+- <b>Process creation</b>: Requires allocating a Process Control Block (PCB), a larger structure that includes a memory map, 
+list of open files, environment variables, and process-specific data. 
+Allocating and managing the memory map is often the most time-consuming part.
+
+</pre>
+
+<br><br><h1>Question 6</h1>
+
+<pre><span style="color: blue;">What are the benefits of a multithreaded system?</span>
+
+Benefits of multithreading include:
+
+- <b>Increased responsiveness</b>: Even if one thread is blocked, other threads can still execute.
+- <b>Resource sharing</b>: Threads can share code and memory, improving resource efficiency.
+- <b>Economy</b>: Creating threads uses fewer resources compared to creating separate processes.
+- <b>Taking advantage of multiprocessors</b>: Threads can run in parallel on different processors, improving performance.
+
+</pre>
+
+<br><br><h1>Question 7</h1>
+
+<pre><span style="color: blue;">Which of the following components of program state are shared across threads in a multithreaded process?</span>
+
+The components shared across threads are:
+
+- <b>Heap memory</b>
+- <b>Global variables</b>
+
+Each thread has its own:
+
+- <b>Register values</b>
+- <b>Stack memory</b>
+
+</pre>
+
+<br><br><h1>Question 8</h1>
+
+<pre><span style="color: blue;">Describe the actions taken by a kernel to context-switch between kernel-level threads.</span>
+
+Context switching between kernel-level threads typically involves:
+
+- Saving the CPU register values of the thread being switched out.
+- Restoring the CPU register values of the thread that is being scheduled next.
+
+</pre>
+
+<br><br><h1>Question 9</h1>
+
+<pre><span style="color: blue;">What are two differences between user-level threads and kernel-level threads? Under what circumstances is one type better than the other?</span>
+
+- <b>User-level threads</b>: Are not recognized by the kernel and are scheduled by the thread library. They are lighter and less expensive to maintain.
+- <b>Kernel-level threads</b>: Are managed by the kernel and are typically more expensive to maintain, as they require kernel data structures.
+
+<b>When each is better</b>:
+- <b>User-level threads</b>: Are better in situations where minimal kernel involvement is needed and where lightweight threading is crucial.
+- <b>Kernel-level threads</b>: Are better when true multitasking and better integration with hardware resources are necessary.
+
+</pre>
+
+<br><br><h1>Question 10</h1>
+
+<pre><span style="color: blue;">State three common ways of establishing a relationship between user threads and kernel threads.</span>
+
+Common models for establishing a relationship between user threads and kernel threads are:
+
+1. <b>Many-to-One Model</b>: Multiple user threads are mapped to a single kernel thread.
+2. <b>One-to-One Model</b>: Each user thread is mapped to a kernel thread.
+3. <b>Many-to-Many Model</b>: Multiple user threads are mapped to multiple kernel threads.
+
+</pre>
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 2.html" target="_blank">Module 2</a></button>
+    <button class="button-1"><a href="Module 4.html" target="_blank">Module 4</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

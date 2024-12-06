@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 9</title>
+</head>
+
+<body>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - File Systems, File System Implementation"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">What are the basic attributes of a file?</span>
+
+Name, the symbolic file name
+Identifier: non-human readable name for the file. It is a number to identify the file within the file system
+Type: to identify the file type
+Location: a pointer to a device and location of the file
+Size; in bytes, words or blocks
+Protection; Access control information determines how can do reading, writing, or execution
+Time, date, and user Identification; info on creation, last modification, and last use, this info is useful
+for security and usage monitoring.
+
+</pre>
+
+<h1>Question 2</h1>
+
+<pre><span style="color: blue;">Some systems provide file sharing by maintaining a single copy of a file; other systems maintain several copies, one for each of the users sharing the file. 
+Discuss the relative merits of each approach.</span>
+
+With a single copy, several concurrent updates to a file may result in user obtaining incorrect information, and the
+file being left in an incorrect state. With multiple copies, there is storage waste and the various copies may not be
+consistent with respect to each other.
+
+</pre>
+
+<h1>Question 3</h1>
+
+<pre><span style="color: blue;">What data structures can be used for directory information? What problems might arise with these data structures?</span>
+
+a. Linear list is slow to access particular file. Also must decide how to take care of deletions (mark,
+copy last entry to it, ...).
+b. Linked list requires storage overhead for pointers; also, if link goes bad, rest of files are lost.
+c. Sorted list requires list always to be sorted, which means extra work on creating and deleting
+files.
+d. Binary tree suffers like linked list.
+e. Hash tables are set up for a maximum number of files; also there is a problem with collisions.
+
+</pre>
+
+<h1>Question 4</h1>
+
+<pre><span style="color: blue;">Among the three ways (Contiguous, Linked, and Indexed) of allocating storage, which one is the fastest?</span>
+
+• Contiguous is fastest.
+• Linked is slower, because disk head may have to move between accesses of file.
+• Indexed is slowest, unless the entire index is smaller in size and can be kept in memory at all times. If not, extra
+time is needed to access next block of file indexes.
+
+</pre>
+
+<h1>Question 5</h1>
+
+<pre><span style="color: blue;">Given a system that supports strategies of contiguous, linked, and indexed allocation, describe the characteristics of the files suitable to be used for each strategy.</span>
+
+• Contiguous – if file is usually accessed sequentially, if file is relatively small.
+• Linked – if file is large and usually accessed sequentially.
+• Indexed – if file is large and usually accessed randomly.
+
+</pre>
+
+<h1>Question 6</h1>
+
+<pre><span style="color: blue;">Consider a system where free space is kept in a free-space list.
+a. Suppose that the pointer to the free-space list is lost. Can the system reconstruct the free-space list? Explain your answer.
+b. Suggest a scheme to ensure that the pointer is never lost as a result of memory failure.</span>
+
+In order to reconstruct the free list, it would be necessary to perform “garbage collection.” This would entail
+searching the entire directory structure to determine which blocks are already allocated to files. Those remaining
+unallocated blocks could be re-linked as the free-space list. The free-space list pointer could be stored on the disk,
+perhaps in several places.
+
+</pre>
+
+<h1>Question 7</h1>
+
+<pre><span style="color: blue;">Suppose that a file system contains 5 direct pointers to data blocks, 1 indirect pointer, 1 double indirect pointer and 1 triple indirect pointer. 
+Assume that the size of the data blocks is 1Kb and each block numbers are represented as 4 byte unsigned integers.
+(a) What is maximum number of bytes addressed by 5 direct pointers?
+(b) What is maximum number of bytes addressed by single indirect pointer?
+(c) What is the maximum number of bytes addressed by double indirect pointer?
+(d) What is the maximum number of bytes addressed by triple indirect pointer?
+(e) What is the maximum file size that can be supported by this file system?</span>
+
+(a) What is maximum number of bytes addressed by 5 direct pointers?
+= Number of direct pointers * Blocksize
+= 5 * 1Kb
+= 5Kb
+
+(b) What is maximum number of bytes addressed by single indirect pointer?
+= NumberOfEntries * BlockSize
+= (Blocksize / BlockNumberSize) * BlockSize
+= (1Kb / 4b) * 1Kb
+= 256 * 1Kb
+= 256Kb
+
+(c) What is the maximum number of bytes addressed by double indirect pointer?
+= NumberOfEntries^2 * BlockSize
+= (Blocksize / BlockNumberSize)^2 * BlockSize
+= (1Kb / 4b)^2 * 1Kb
+= (2^10 / 2^2)^2 * (2^10b)
+= (2^8)^2 * (2^10)b
+= (2^16) * (2^10)b
+= 2^6 * 2^20 b
+= 64 Mb
+
+(d) What is the maximum number of bytes addressed by triple indirect pointer?
+= NumberOfEntries^3 * BlockSize
+= (Blocksize / BlockNumberSize)^3 * BlockSize
+= (1Kb / 4b)^3 * 1Kb
+= (2^10 / 2^2)^3 * (2^10b)
+= (2^8)^3 * (2^10)b
+= (2^24) * (2^10)b
+= 2^4 * 2^30 b
+= 16 Gb
+
+(e) What is the maximum file size that can be supported by this file system?
+= 16Gb + 64Mb + 256Kb + 5 Kb
+= 16777216 Kb + 65536 Kb + 256 Kb + 5Kb
+= 16843013 Kb (16.06Gb)
+
+</pre>
+
+<h1>Question 8</h1>
+
+<pre><span style="color: blue;">Consider a file system that uses inodes to represent files. Disk blocks are 8-KB in size and a pointer to a disk block requires 4 bytes. 
+This file system has 12 direct disk blocks, plus single, double, and triple indirect disk blocks. What is the maximum size of a file that can be stored in this file system?</span>
+
+(12 * 8 /KB/) + (2048 * 8 /KB) + (2048 * 2048 * 8 /KB) + (2048 * 2048 * 2048 * 8 /KB) = 64 terabytes
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 8.html" target="_blank">Module 8</a></button>
+    <button class="button-1"><a href="Module 10.html" target="_blank">Module 10</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

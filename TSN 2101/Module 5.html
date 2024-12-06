@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 5</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Process Synchronization"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">What three conditions must be satisfied in order to solve the critical section problem?</span>
+
+In a solution to the critical section problem, no process may be executing in its critical section if a process is currently executing in its critical section (Mutual Exclusion). 
+Furthermore, only those processes that are not executing in their remainder sections can participate in the decision on which process will enter its critical section next 
+and this selection cannot be postponed indefinitely (Progress). 
+Finally, a bound must exist on the number of times that other processes are allowed to enter their critical section after
+a process has made a request to enter its critical section and before that request is granted (Bounded Waiting).
+
+</pre>
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">Race conditions are possible in many computer systems. Consider a banking system with the following two functions: deposit(amount) and withdraw(amount). 
+These two functions are passed the amount that is to be deposited or withdrawn from a bank account. 
+Assume a shared bank account exists between a husband and wife and concurrently the husband calls the withdraw() function and the wife calls deposit(). 
+Describe how a race condition is possible and what might be done to prevent the race condition from occurring.</span>
+
+Assume the balance in the account is 250.00 and the husband calls withdraw(50) and the wife calls deposit(100). 
+Obviously, the correct value should be 300.00. 
+Since these two transactions will be serialized, the local value of balance for the husband becomes 200.00, but before he can commit the transaction, 
+the deposit(100) operation takes place and updates the shared value of balance to 300.00.
+We then switch back to the husband, and the value of the shared balance is set to 200.00 - obviously an incorrect value.
+
+</pre>
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">Briefly explain Peterson’s solution to the critical-section problem.</span>
+
+Peterson’s solution is restricted to two processes that alternate execution between their critical sections and remainder sections. 
+Assume that the LOAD and STORE instructions are atomic; that is, they cannot be interrupted. 
+The two processes share two variables, int turn; and Boolean flag[2]. The variable turn indicates whose turn it is to enter the critical section. 
+The flag array is used to indicate if a process is ready to enter the critical section. flag[i] = true implies that process Pi is ready to enter its critical section.
+
+The structure of the process Pi in Peterson’s solution is given below:
+
+do {
+  flag[i] = TRUE;
+  turn = j;
+  while (flag[j] && turn == j);
+  critical section
+  flag[i] = FALSE;
+  remainder section
+} while (TRUE);
+
+</pre>
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">Write two short methods that implement the simple semaphore wait() and signal() operations on global variable, S.</span>
+
+<b>wait(S)</b> {
+  while (S <= 0);
+  S--;
+}
+
+<b>signal(S)</b> {
+  S++;
+}
+</pre>
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">What is the meaning of the term busy waiting? Can busy waiting be avoided altogether? Explain your answer.</span>
+
+Busy waiting means that a process is waiting for a condition to be satisfied in a tight loop without relinquishing the processor. 
+Alternatively, a process could wait by relinquishing the processor, and block on a condition and wait to be awakened at some appropriate time in the future. 
+Busy waiting can be avoided but incurs the overhead associated with putting a process to sleep and having to wake it up when the appropriate program state is reached.
+
+</pre>
+<br><br><h1>Question 6</h1>
+
+<pre><span style="color: blue;">The following program segment is used to manage a finite number of instances of an available resource. 
+    The maximum number of resources and the number of available resources are declared as follows:</span>
+
+#define MAX_RESOURCES 5
+int available_resources = MAX_RESOURCES;
+
+When a process wishes to obtain a number of resources, it invokes the decrease_count() function:
+
+<b>decrease_count(int count)</b> {
+  if (available_resources < count)
+    return -1;
+  else {
+    available_resources -= count;
+    return 0;
+  }
+}
+
+When a process wants to return a number of resources, it calls the increase_count() function:
+
+<b>increase_count(int count)</b> {
+  available_resources += count;
+  return 0;
+}
+
+The preceding program segment produces a race condition. Do the following:
+
+<b>a. Identify the data involved in the race condition.</b>
+The variable available_resources.
+
+<b>b. Identify the location (or locations) in the code where the race condition occurs.</b>
+The code that decrements available_resources and the code that increments available_resources are the statements that could be involved in race conditions.
+
+<b>c. Using a semaphore, fix the race condition.</b>
+Use a semaphore to represent the available_resources variable and replace increment and decrement operations by semaphore increment and semaphore decrement operations.
+
+</pre>
+<br><br><h1>Question 7</h1>
+
+<pre><span style="color: blue;">Describe the dining-philosophers problem and how it relates to operating systems.</span>
+
+The scenario involves five philosophers sitting at a round table with a bowl of food and five chopsticks. 
+Each chopstick sits between two adjacent philosophers. The philosophers are allowed to think and eat. 
+Since two chopsticks are required for each philosopher to eat, and only five chopsticks exist at the table, no two adjacent philosophers may be eating at the same time. 
+A scheduling problem arises as to who gets to eat at what time. This problem is similar to the problem of scheduling processes that require a limited number of resources.
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 4.html" target="_blank">Module 4</a></button>
+    <button class="button-1"><a href="Module 6.html" target="_blank">Module 6</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

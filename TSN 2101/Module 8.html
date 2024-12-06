@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 8</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Virtual Memory Management"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">Consider the page table for a system with 12-bit virtual and physical addresses with 256-byte pages. 
+The list of free page frames is D, E, F (D is at the head of the list, E is second, and F is last). 
+Convert the following virtual addresses to their equivalent physical addresses in hexadecimal. 
+All numbers are given in hexadecimal. A dash for frame indicates that the page is not in memory. 
+If the frame is not in memory, it will be brought to one of the free page frames in order.</span>
+    
+Page Frame
+0 - 
+1 2
+2 C
+3 A
+4 - 
+5 4
+6 3
+7 - 
+8 B
+9 0
+
+(i) 9EF
+(ii) 111
+(iii) 700
+(iv) 0FF
+
+Solution:
+(i) 0EF
+(ii) 211
+(iii) D00
+(iv) EFF
+
+</pre>
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">Consider the following page table in a demand paging system. Assume the page size of 2000 bytes. Assume the usage of decimal values. 
+Check whether the virtual addresses given below would generate a page fault? If it does not generate page fault, identify the physical address.</span>
+
+Frame    Valid-Invalid bit
+5        v
+22       i
+300      v
+150      v
+30       i
+50       i
+120      v
+101      v
+
+(i) Virtual address 10230
+(ii) Virtual address 5213
+(iii) Virtual address 100
+(iv) Virtual address 8125
+
+Solution:
+(i) Virtual address 10230: 
+Offset 230 in page 5 (10230/2000).
+Page 5 contains invalid bit (i). This results in page fault.
+
+(ii) Virtual address 5213: 
+Offset 1213 in page 2 (5213/2000).
+Page 2 contains valid bit (v) and the corresponding frame no. is 300. 
+Physical address = Starting address of the frame + Offset = (300 × 2000) + 1213 = 601213
+
+(iii) Virtual address 100: 
+Offset 100 in page 0 (100/2000).
+Page 0 contains valid bit (v) and the corresponding frame no. is 5. 
+Physical address = Starting address of the frame + Offset = (5 × 2000) + 100 = 10100
+
+(iv) Virtual address 8125: 
+Offset 125 in page 4 (8125/2000).
+Page 4 contains invalid bit (i). This results in page fault.
+
+</pre>
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">On a system using demand-paged memory, it takes 200ns to satisfy a memory request if the page is in memory. 
+If the page is not in memory, the request takes 7ms if a free frame is available or the page to be swapped out has not been modified. 
+It takes 15ms if the page to be swapped out has been modified. 
+What is the effective access time if the page fault rate is 5%, and 60% of the time the page to be replaced has been modified/free frame is not available?</span>
+
+Solution:
+Given: Page fault rate is 5%. Hence the page is in memory 95% of the time. 
+It requires 200ns or 0.2microseconds 95% of the time.
+Given: Of the remaining 5% that result in page fault, 60% of the time the page to be replaced has been modified/free frame is not available. 
+Hence 60% of 5 = 3% of total access takes 15milliseconds or 15000 microseconds.
+40% of 5 = 2% of total access takes 7milliseconds or 7000 microseconds.
+Effective access time = (0.95 × 0.2) + (0.02 × 7000) + (0.03×15000) = 590.19 microseconds.
+
+</pre>
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">Consider a demand-paging system with a paging disk that has an average access and transfer time of 20 milliseconds. 
+Addresses are translated through a page table in main memory, with an access time of 1 microsecond per memory access. 
+Thus, each memory reference through the page table takes two accesses. 
+To improve this time, an associative memory is added that reduces access time to one memory reference if the page-table entry is in the associative memory. 
+Assume that 80 percent of the accesses are in the associative memory and 10 percent cause page faults. What is the effective memory access time?</span>
+
+Solution:
+Effective Memory Access Time
+= (0.8) × (1 microsecond) + (0.1) × (2 microseconds) + (0.1) × (20003 microseconds)
+= 0.8 + 0.2 + 2000.3 = 2001.3 microseconds or 2.0013 milliseconds.
+
+</pre>
+<br><br><h1>Question 5</h1>
+
+<pre><span style="color: blue;">Consider the following page reference string:
+1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
+Assume the availability of FOUR frames and all the frames are initially empty. 
+How many page faults would occur for First in First Out (FIFO) page replacement algorithm? 
+Identify the final pages in the frames.
+
+</span>
+
+Solution:
+(i) First In First Out (FIFO) page replacement algorithm:
+Number of available frames: 4
+Before Page Fault After
+-, -, -, - 1 Yes (1) 1, -, -, -
+1, -, -, - 2 Yes (2) 2, 1, -, -
+2, 1, -, - 3 Yes (3) 3, 2, 1, -
+3, 2, 1, - 4 Yes (4) 4, 3, 2, 1
+4, 3, 2, 1 2 No 4, 3, 2, 1
+4, 3, 2, 1 1 No 4, 3, 2, 1
+4, 3, 2, 1 5 Yes(5) 5, 4, 3, 2
+5, 4, 3, 2 6 Yes (6) 6, 5, 4, 3
+6, 5, 4, 3 2 Yes(7) 2, 6, 5, 4
+2, 6, 5, 4 1 Yes(8) 1, 2, 6, 5
+1, 2, 6, 5 2 No 1, 2, 6, 5
+1, 2, 6, 5 3 Yes (9) 3, 1, 2, 6
+3, 1, 2, 6 7 Yes(10) 7, 3, 1, 2
+7, 3, 1, 2 6 Yes(11) 6, 7, 3, 1
+6, 7, 3, 1 3 No 6, 7, 3, 1
+6, 7, 3, 1 2 Yes(12) 2, 6, 7, 3
+2, 6, 7, 3 1 Yes(13) 1, 2, 6, 7
+1, 2, 6, 7 2 No 1, 2, 6, 7
+1, 2, 6, 7 3 Yes (14) 3, 1, 2, 6
+3, 1, 2, 6 6 No 3, 1, 2, 6
+
+Number of page faults: 14
+Final Pages in the frames: 3, 1, 2, 6
+
+</pre>
+<br><br><h1>Question 6</h1>
+
+<pre><span style="color: blue;">Consider the following page reference string:
+1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
+Assume the availability of FOUR frames and all the frames are initially empty. 
+How many page faults would occur for Least Recently Used (LRU) page replacement algorithm? Identify the final pages in the frames.</span>
+
+Solution:
+LRU page replacement algorithm:
+Number of available frames: 4
+
+Reference string:
+1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6
+
+1 1 1 1 1 1 1 1 6 6
+2 2 2 2 2 2 2 2 2
+3 3 3 3 3 3 3 3 3
+8
+
+</pre>
+<br><br><h1>Question 7</h1>
+
+<pre><span style="color: blue;">
+Consider the following page reference string:
+1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
+Assume the availability of FOUR frames and all the frames are initially empty. 
+How many page faults would occur for Optimal page replacement algorithm? 
+Identify the final pages in the frames.</span>
+
+Optimal Page replacement algorithm:
+Number of available frames: 4
+
+Reference string:
+1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
+
+1 1 1 1 1 1 7 1
+2 2 2 2 2 2 2
+3 3 3 3 3 3
+4 5 6 6 6
+
+y y y y n n y y n n n n y n n n y n n n
+y- Page fault
+n- No page fault
+Number of Page faults: 8
+Final Pages in the frames: 1,2,3,6
+
+</pre>
+
+<br><br><h1>Question 8</h1>
+
+<pre><span style="color: blue;">
+Given a system with four page frames, the following table indicates page number, 
+load time, last reference time, dirty bit, and reference bit.
+
+Page number    Load Time    Last Reference Time    Dirty Bit    Reference Bit
+0              167          374                    1           1
+1              321          321                    0           0
+2              254          306                    1           0
+3              154          331                    0           1
+
+Identify the victim (page to be replaced) for the following algorithms.
+
+(i) First-In-First-Out (FIFO)
+(ii) Least-Recently-Used (LRU)
+(iii) Reference bit – Dirty bit combination
+(iv) Second Chance</span>
+
+Solution:
+(i) Page 3 (Selects the page that is loaded first)
+(ii) Page 2 (Selects the page that is referenced least recently)
+(iii) Page 1 (class with no modification (Dirty bit: 0) and not referenced recently (Reference bit: 0))
+(iv) Page 2 (Second chance first checks the oldest page, page 3. Since its reference bit is 1, it resets the bit to 0 and sets the entry’s load time to the current time. 
+Next, it checks the next oldest page, which is page 0. Since its reference bit is 1, it resets the bit to 0 and sets the entry’s load time to the current time. 
+Then it checks the next oldest page, which is page 2. Since its reference bit is 0, it is selected)
+
+</pre>
+<br><br><h1>Question 9</h1>
+
+<pre><span style="color: blue;">
+Assume that a computer system has four frames and uses six reference bits to 
+implement additional-reference bits (aging) page-replacement algorithm. At the 
+first clock tick, the reference bits for pages 0 through 3 are 1, 0, 1, and 1 
+respectively. Values at subsequent ticks are 0011, 1001, 0110, 1100, and 0001.
+
+(i) After the last tick, what is the value of the reference bits for all four pages?
+(ii) Identify the victim page for page replacement.</span>
+
+Solution:
+(i)
+Page number    Value of reference bits after Tick 6
+0              010101 (21)
+1              011000 (24)
+2              001011 (11)
+3              100111 (39)
+
+(ii) Victim page – Page with lowest unsigned integer value – Page 2
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 7.html" target="_blank">Module 7</a></button>
+    <button class="button-1"><a href="Module 9.html" target="_blank">Module 9</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

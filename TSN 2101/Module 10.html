@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 10</title>
+</head>
+
+<body>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Secondary Storage Management"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<h1>Question 1</h1>
+
+<pre><span style="color: blue;">Suppose that a disk drive has 1000 tracks, numbered 0 to 999. Assume that the drive is currently
+serving a request at track 345, and the head is moving towards track 0. The queue of pending
+requests, in FIFO order is
+
+123, 874, 692, 475, 105, 376
+
+Starting from the current head position, what is the total seek distance (in tracks) that the disk arm
+moves and the total seek time (in ms) required to satisfy all the pending requests, for each of the
+following algorithms? Assume the seek time required for traversing each track is 3 ms.
+
+a. FIFO/FCFS
+b. SSTF
+c. SCAN
+d. C-SCAN
+e. LOOK
+f. C-LOOK</span>
+
+Solution:
+Current request: track 345
+Pending request: 123, 874, 692, 475, 105, 376
+Head is moving towards track 0 (for SCAN)
+
+FIFO/FCFS     SSTF        SCAN
+Next track
+accessed
+123           222         376
+874           751         123
+692           182         692
+475           217         0
+105           370         874
+376           271         475
+              874         692
+
+Total seek
+distance
+2013           Total seek
+distance
+1298           Total seek
+distance
+1219
+
+Total seek
+time (ms)
+6039           Total seek
+time (ms)
+3894           Total seek
+time (ms)
+3675           3657
+
+Current request: track 345
+Pending request: 123, 874, 692, 475, 105, 376
+Head is moving towards track 0 (for C-SCAN, LOOK & C-LOOK)
+
+C-SCAN      LOOK        C-LOOK
+Next track
+accessed
+123           123         123
+105           105         105
+0             376         874
+999           475         692
+874           692         475
+692           874         376
+475           376
+
+Total seek
+distance
+1967           Total seek
+distance
+1009           Total seek
+distance
+1507
+
+Total seek
+time (ms)
+5901           Total seek
+time (ms)
+3027           Total seek
+time (ms)
+4521
+
+</pre>
+
+<h1>Question 2</h1>
+
+<pre><span style="color: blue;">List down the differences for RAID-0, Raid-1, Raid-2, Raid-3, Raid-4, Raid-5 and Raid-6.</span>
+
+Solution:
+Raid-0: No redundancy
+Raid-1: Disk Mirroring. Low CPU and more I/O
+Raid-2: Memory-Style Error-Correcting Code (ECC) organization. If one disk fails, the
+remaining bits of the byte and the associated error-correction bits can be read from
+other disks and be used to reconstruct the damaged data.
+Raid-3: Bit-interleaved Parity
+Disk controller can detect whether a sector has been correctly read, so a single
+parity bit can be used for error correction and detection. Every disk has to
+participate in every I/O request, which leads to a lower I/O request.
+Raid-4: Block-interleaved parity
+Keeps a parity block on a separate disk for corresponding blocks from N other
+disks. If one disk fails, the parity block can be used with the corresponding blocks
+from other disks to restore the blocks of the failed disk.
+However, a write request in a block must include a write request to the parity block as well.
+Raid-5: Block-interleaved distributed parity
+A parity block cannot store parity for blocks in the same disk because a disk failure
+would result in total loss. By spreading the parity across all the disks in the set,
+RAID-5 avoids the potential overuse of a single parity disk that can occur in
+RAID-4.
+Raid-6: P+Q redundancy
+Uses parity and Reed-Solomon (ECC code). The system can tolerate two disk failures.
+
+</pre>
+
+<h1>Question 3</h1>
+
+<pre><span style="color: blue;">Consider a 4-drive, 200GB-per-drive RAID array. What is the available data storage capacity for each of
+the following RAID levels?</span>
+
+i. RAID 0: 800GB
+ii. RAID 1: 400GB
+iii. RAID 4: 600GB
+iv. RAID 5: 600GB
+v. RAID 6: 400GB
+
+</pre>
+
+<h1>Question 4</h1>
+
+<pre><span style="color: blue;">Differentiate between the following terms:</span>
+
+a. SCAN, Circular SCAN, LOOK, Circular LOOK and F-SCAN disk scheduling.
+b. Sector sparing and sector slipping of bad block recovery with respect to magnetic disks.
+c. Mirroring, bit level striping and block level striping with respect to RAID organization.
+
+Solution:
+a.
+• SCAN: The disk arm starts at one end of the disk and moves towards the other end, servicing
+all outstanding requests on the route, until it reaches the last cylinder/track in that direction.
+At the other end, the direction of head movement is reversed, and servicing continues.
+• C-SCAN: The head is moved from one end of the disk to the other, servicing requests along
+the way. When the head reaches the other end, it immediately returns to the beginning of
+the disk without servicing any requests on the return trip. This is designed to provide a more
+uniform wait time. The reason behind this algorithm is that by the time the arm reaches the
+highest numbered tracks, there are a few requests immediately behind it. However, there
+are many requests at the far end of the disk, and these have been waiting the longest.
+• LOOK: A variation of the SCAN in which the arm goes only as far as the final request in each
+direction. They look for a request before continuing to move in a given direction.
+• F-SCAN: A variation of the LOOK algorithm which uses two sub-queues. When a scan begins, all of
+the requests are in one of the queues, with the other empty. During the scan, all new
+requests are put into the other queue. Thus, the service of new requests is deferred until all of
+the old requests have been processed.
+
+b.
+• Sector sparing: The disk controller maintains a list of bad blocks on the disk. The list is
+initialized during the low-level formatting at the factory and is updated over the life of the
+disk. Low-level formatting at the factory sets aside spare sectors not visible to the operating
+system. The controller can be told to replace each bad sector logically with one of the spare
+sectors.
+• Sector slipping: During low-level formatting, defect lists are populated, which store the
+sectors that are bad. The bad sectors are then mapped, and a sector slipping algorithm is
+used. Sector remapping is done to slip the sectors past the bad spot.
+
+c.
+• Mirroring: Redundancy is introduced by duplicating every disk. Here the logical disk consists
+of two physical disks. Every write is carried out on both disks. If one of the disks in the
+volume fails, the data can be read from the other.
+• Bit level striping: Splitting the bits of each byte across multiple disks is called bit-level
+striping. For example, if we have an array of eight disks, we write bit i of each byte to disk i.
+The array of eight disks can be treated as a single disk that has eight times the access rate.
+• Block-level striping: Splitting the blocks of a file across multiple disks is done.
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 9.html" target="_blank">Module 9</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

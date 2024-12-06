@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSN 2101 - 6</title>
+</head>
+
+<body>
+        <!-- This will hold the dynamically generated header -->
+        <div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="TSN 2101 - Deadlocks"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Questions from Tutorials</label>
+    <div class="content hidecontent">
+<br><br><h1>Question 1</h1>
+
+<pre><span style="color: blue;">Explain the four conditions that must hold for deadlock to occur.</span>
+
+The four conditions that must hold for a deadlock to occur are:
+
+- <b>Mutual exclusion</b>: 
+Only one process at a time can use a resource. If another process requests the resource, it must be delayed until the resource is released.
+- <b>Hold and wait</b>: 
+A process holding at least one resource is waiting to acquire additional resources held by other processes.
+- <b>No preemption</b>: 
+Resources cannot be preempted; they can only be released voluntarily by the process holding them after completing its task.
+- <b>Circular wait</b>: 
+A set of processes {P0, P1, ..., Pn} exists such that P0 is waiting for a resource held by P1, P1 is waiting for a resource held by P2, ..., 
+Pn-1 is waiting for a resource held by Pn, and P0 is waiting for a resource held by P0.
+
+</pre>
+
+<br><br><h1>Question 2</h1>
+
+<pre><span style="color: blue;">Consider a system consisting of four resources of the same type that are shared by three processes, each of which needs at most two resources. 
+Show that the system is deadlock-free.</span>
+
+Suppose the system is deadlocked. This implies that each process is holding one resource and waiting for another. 
+Since there are three processes and four resources, at least one process must be able to obtain two resources. 
+This process will not need more resources, and thus, it will release its resources when done. Therefore, the system cannot be deadlocked.
+
+</pre>
+
+<br><br><h1>Question 3</h1>
+
+<pre><span style="color: blue;">Consider the following snapshot of a system:
+Process Allocation
+ABCD
+
+Max
+ABCD
+
+Available
+ABCD
+P0 0012 0012 1520
+P1 1000 1750
+P2 1354 2356
+P3 0632 0652
+P4 0014 0656
+Answer the following questions using the banker's algorithm:</span>
+
+a) <span style="color: blue;">What is the content of the matrix Need?</span>
+
+Since <b>Need</b> = <b>Max</b> - <b>Allocation</b>, the content of <b>Need</b> is:
+
+ABCD  
+P0: 0000  
+P1: 0750  
+P2: 1002  
+P3: 0020  
+P4: 0642
+
+b) <span style="color: blue;">Is the system in a safe state?</span>
+
+Yes, the sequence <b>P0, P2, P1, P3, P4</b> satisfies the safety requirement. This means the system is in a safe state.
+
+c) <span style="color: blue;">If a higher priority request made by process P1 for (0,4,2,0) resources, can the request be granted immediately?</span>
+
+Yes, the request can be granted immediately because:
+
+i. (0,4,2,0) ≤ Need(P1) = (0,7,5,0)  
+ii. (0,4,2,0) ≤ Available = (1,5,2,0)
+
+The new system state after the allocation is made is still safe, and the sequence <b>P0, P2, P1, P3, P4</b> satisfies the safety requirement.
+
+</pre>
+
+<br><br><h1>Question 4</h1>
+
+<pre><span style="color: blue;">What is the optimistic assumption made in the deadlock-detection algorithm? How could this assumption be violated?</span>
+
+The optimistic assumption made in the deadlock-detection algorithm is that there will be no circular wait conditions in terms of 
+resource allocation and processes making requests for those resources. 
+This assumption could be violated if a circular wait does indeed occur in practice, leading to a deadlock situation.
+
+</pre>
+
+
+
+    </div>
+    
+</div>
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 5.html" target="_blank">Module 5</a></button>
+    <button class="button-1"><a href="Module 7.html" target="_blank">Module 7</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

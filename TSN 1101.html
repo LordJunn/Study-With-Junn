@@ -11,22 +11,14 @@
 </head>
 
 <body>
-    <header id="top">
-        <nav>
-          <div class="logo-holder">
-            <a href="index.html">Study with Lord Junn</a>
-          </div>
-          <div class="title">Computer Architecture & Organization</div>
-          <button class="menu-toggle" aria-label="Toggle menu">
-            ☰
-          </button>
-          <ul class="dropdown">
-            <li class="show-on-mobile"><a href="index.html">Back to home</a></li>
-            <li>TSN 1101</li>
-            <li>CSN 6114</li>
-          </ul>
-        </nav>
-    </header>
+<!-- Container for the dynamically generated header -->
+<div id="header-container"></div>
+
+<!-- Configuration element for the header -->
+<div id="header-config"
+     data-title="Computer Architecture & Organization"
+     data-menu-links='[{"text": "Back to home", "href": "index.html"}, {"text": "TSN 1101"}, {"text": "CSN 6114"}]'>
+</div>
 <!-- #end of header -->
 <div class="tenor-gif-embed" data-postid="5021683105077086409" data-share-method="host" data-aspect-ratio="1.76596" data-width="100%">
     <a href="https://tenor.com/view/gosick-victorique-victorique-de-blois-cry-tears-gif-5021683105077086409"></a></div> 
@@ -45,7 +37,7 @@
         <ul class="links">
             <li class="rows row1">
                 <h3>Module 1</h3>
-                <a href="TSN 1101/Module A1.html" target="_blank">Let's go!</a>
+                <a href="" target="_blank">Let's go!</a>
             </li>
             <li class="rows row2">
                 <h3>Module 2</h3>
@@ -127,7 +119,7 @@
 
 
 </div>
-
+<script type="text/javascript" src="js/subject.js"></script>
 
 </body>
 
