@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midterms/Tests - Operating Systems</title>
+</head>
+
+<body>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+     data-course="Midterms/Tests - Operating Systems"
+     data-topic-link="../TSN 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+<h1 id="padded">Some tips given out to ease learning.</h1>
+<div id="myaccordion">
+
+    <input type="checkbox" id="accordion1" class="hidecontent"/>
+    <label for="accordion1">Mid Terms</label>
+    <div class="content hidecontent">
+
+        <input type="checkbox" id="accordionx1" class="hidecontent"/>
+        <label for="accordionx1">By WKChan/NH/SCTan [1 Oct 2021]</label>
+        <div class="content hidecontent">
+
+<h1>Question 1</h1>
+<pre><span id="question">In the development and design of most modern operating systems, a modular kernel may be the best of the design techniques. 
+Explain why this is so.</span> [4m]
+        
+Uses object-oriented approach, with a relatively small core kernel and a set of modules which can be linked in dynamically. 
+Each core component is separate
+Each talks to the others over known interfaces
+Each is loadable as needed within the kernel
+
+<span id="hint">Lect 2 Slide 39/40</span>
+</pre>
+        
+<br><br><h1>Question 2</h1>
+<pre><span id="question">Operating systems (OS) are interrupt driven. How interrupts are handled by the OS?</span> [2m]
+        
+
+</pre>
+        
+<br><br><h1>Question 3</h1>
+<pre><span id="question">What are the differences between a trap and an interrupt? What is the use of each type?</span> [4m]
+        
+
+</pre>
+    
+<br><br><h1>Question 4</h1>
+<pre><span id="question">Explain how does stack overflow happen in a process?</span> [2m]
+    
+The stack and the heap start at opposite ends of the process's free space and grow towards each other. 
+If they should ever meet, then either a stack overflow error will occur, or else a call to new or malloc will fail due to insufficient memory available.
+
+<span id="hint">Lect 3 Slide 5</span>
+</pre>
+    
+<br><br><h1>Question 5</h1>
+<pre><span id="question">A child process has a PID 1000, this child process is created by a parent Process. 
+What is a possible PID value for the parent Process?</span> [1m]
+
+
+    
+
+</pre>
+    
+<br><br><h1>Question 6</h1>
+<pre><span id="question">How does mixing IO Burst program with CPU burst program increase the CPU utilization?</span> [1m]
+    
+Because: 
+I/O-bound process – spends more time doing I/O than computations, many short CPU bursts
+CPU-bound process – spends more time doing computations; few very long CPU bursts
+
+<span id="hint">Lect 3 Slide 15</span>
+</pre>
+    
+<br><br><h1>Question 7</h1>
+Below is the process table<br>
+<img src="Images/Tests/TSN 2101, MT1, image 7.png">
+<pre><span id="question">i) Draw the Gantt charts illustrating the execution of these processes using 
+Pre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</span> [4m]
+
+<span id="question">ii) What is the value of average turn-around time forPre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</span> [2m]
+    
+
+</pre>
+  
+        </div>
+
+        <input type="checkbox" id="accordionx2" class="hidecontent"/>
+        <label for="accordionx2">[18 Feb 2022]</label>
+        <div class="content hidecontent">
+        
+
+<h1>Question 1</h1>
+<pre><span id="question">Process needs computer resources to accomplish its task. 
+Provides four examples of computer resources.</span> [4m]
+        
+
+</pre>
+        
+<br><br><h1>Question 2</h1>
+<pre><span id="question">Explain why the duration of thread execution is smaller than process execution?</span> [2m]
+        
+Thread is smaller than a process.
+Uses fewer resources than process creation.
+
+<span id="hint">Lect 1 Slide 45</span>
+</pre>
+        
+<br><br><h1>Question 3</h1>
+<pre><span id="question">An application program interface (API) is a set of routines, protocols, and tools for building software applications. 
+Provide two reasons on why use APIs rather than system calls?</span> [4m]
+        
+Portability: Any program using that API can compile and run, as long as the system/program supports the API.
+
+Ease of Use compared to actual system call.
+<span id="hint">Lect 2 Slide 14</span>
+</pre>
+    
+<br><br><h1>Question 4</h1>
+Context Switch occurred when CPU switches from one process to another process.<br><br>
+<pre><span id="question">i) Explain what the steps are involved during the context switch</span> [0.5m]
+It involves saving and restoring all of the registers and program counter(s), as well as the process control blocks.
+    
+<span id="question">ii) Explain why an efficient Operating System should minimize the occurrence of context switch</span> [0.5m]
+Context-switch time is overhead; the system does no useful work while switching
+
+<span id="hint">Lect 3 Slide 18</span>
+</pre>
+    
+<br><br><h1>Question 5</h1>
+<pre><span id="question">A signal handler is used to process signals. Explain the steps that involved.</span> [1m]
+    
+Signal is generated by particular event
+Signal is delivered to a process
+Signal is handled
+
+<span id="hint">Lect 3 Slide 46</span>
+</pre>
+    
+<br><br><h1>Question 6</h1>
+<pre><span id="question">How does mix IO Burst program with CPU burst program increase the CPU utilization?</span> [1m]
+
+Because: 
+I/O-bound process – spends more time doing I/O than computations, many short CPU bursts
+CPU-bound process – spends more time doing computations; few very long CPU bursts
+
+<span id="hint">Lect 3 Slide 15</span>
+</pre>
+    
+<br><br><h1>Question 7</h1>
+<img src="Images/Tests/TSN 2101, MT2, image 7.png">
+<pre><span id="question">i) Draw the Gantt charts illustrating the execution of these processes using 
+Pre-emptive ShortestJob First (Pre-SJF), Non-Pre-emptive Shortest Job First (Non-Pre- SJF) and Round Robin (quantum=3) scheduling.</span>[6m]
+
+<span id="question">ii) What is the value of average turn-around time for Round Robin (quantum=3) scheduling.</span> [1m]    
+
+</pre>
+ 
+        
+    
+        
+        </div>
+        
+        <input type="checkbox" id="accordionx3" class="hidecontent"/>
+        <label for="accordionx3">[9 Dec 2022]</label>
+        <div class="content hidecontent">
+
+<h1>Question 1</h1>
+<pre><span id="question">In operating systems, certain instructions could be executed only when the Central Processing Unit (CPU) is in kernel mode. 
+Explain why by providing the reason.</span> [2m]
+    
+
+</pre>
+    
+<br><br><h1>Question 2</h1>
+<pre><span id="question">The operating system gives several services to utility programmers and users. 
+List and explain the FOUR important services that are provided by an operating system.</span> [4m]
+    
+• User Interface (UI):
+    o Types include Command-Line Interface (CLI), Graphical User Interface (GUI), and Batch.
+    o Examples: Windows uses a GUI with CLI options; MacOS includes both GUI and UNIX shell options.
+• Program Execution:
+    o Loads programs into memory and manages normal or error-induced termination.
+• I/O Operations:
+    o Handles file access or device communication needs.
+• File-System Manipulation:
+    o Manages file creation, deletion, search, permissions, and directory operations.
+• Communication:
+    o Supports data exchange between processes via shared memory or message passing.
+• Error Detection:
+    o Identifies and manages hardware or program errors to maintain stability.
+• Resource Allocation:
+    o Distributes resources among multiple processes/users.
+• Protection and Security:
+    o Ensures controlled access to resources and defends against unauthorized access.
+
+<span id="hint">Lect 2 Slide 5++</span>
+</pre>
+    
+<br><br><h1>Question 3</h1>
+The process state diagram describes different process states during its lifetime. Schedulers are special system software which handle process scheduling in various ways.<br>
+<img src="Images/Tests/TSN 2101, MT3, image 3.png">
+<pre><span id="question">From the Figure 1, find out the suitable schedulers for bringing a process to different process states.</span> [3m]
+
+<span id="question">i) Scheduler A (New to Ready)
+ii) Scheduler B (Running to Waiting)
+iii) Scheduler C (Ready to Running)</span>
+
+
+</pre>
+    
+<br><br><h1>Question 4</h1>
+Consider the following set of processes in Table 1 below. Assume that lower numbers represent higher priority.<br>
+<img src="Images/Tests/TSN 2101, MT3, image 4.png">
+<pre><span id="question"><br>i) Draw the Gantt chart illustrating the execution of these processes using, 
+Pre-emptive Shortest Job First (Pre-emptive SJF) with showing the necessary steps. 
+Calculate the average turnaround time and the average waiting time for this algorithm.</span> [3m + 0.5m + 0.5m]
+
+<span id="question">ii) Draw the Gantt chart illustrating the execution of these processes using, Pre-emptive priority scheduling with showing the necessary steps.
+Calculate the average turnaround time and the average waiting time for this algorithm.</span> [3m + 0.5m + 0.5m]
+
+<span id="question">iii) Draw the Gantt chart illustrating the execution of these processes using, 
+Round Robin (RR) (quantum = 3) scheduling with showing the necessary steps.</span> [3m]
+
+</pre>
+        
+        </div>
+
+        <input type="checkbox" id="accordionx4" class="hidecontent"/>
+        <label for="accordionx4">Unknown Origin (feat. 🇱ubuntu) [22 Dec 2023]</label>
+        <div class="content hidecontent">
+<h1>Question 1</h1>
+<pre><span id="question">One of the benefits of multithreaded system is "Resource sharing".
+Provide five of the resources thats shared among the threads.</span> [2.5m]
+    
+Heap memory
+Global variables
+Code
+Data
+Files
+<span id="hint">Lect 3 Slide 4</span>
+
+</pre>
+        
+<br><br><h1>Question 2</h1>
+<pre><span id="question">Among the three general methods for passing parameters to the operating systems,
+which method is the fastest?</span> [0.5m]
+        
+Pass parameters in registers
+
+</pre>
+        
+<br><br><h1>Question 3</h1>
+<pre><span id="question">Computer application developers often do not have direct access to the system calls, 
+but can access system calls through an application programming interface (API). 
+Provide and explain two benefits of applying API than system calls.</span> [2m]
+        
+Portability: Any program using that API can compile and run, as long as the system/program supports the API.
+
+Ease of Use compared to actual system call.
+<span id="hint">Lect 2 Slide 14</span>
+</pre>
+        
+<br><br><h1>Question 4</h1>
+<pre><span id="question">In Linux, the 'ls' command lists the contents of the current working directory. 
+Assume that you are accessing a Linux shell on LXTerminal and your current prompt is at 'lubuntu@lubuntu:~$'. 
+By referring to the two figures below, provide two ways using the 'ls' command (by providing the required parameters and/or arguments) 
+to list the files and directories contained in the SYSTEM directory.</span> [3m]
+        
+cd OPERATING, cd SYSTEM, ls
+ls OPERATING/SYSTEM 
+<span style="color: green;">or</span>
+ls/home/lubuntu/OPERATING/SYSTEM
+</pre>
+        
+<br><br><h1>Question 5</h1>
+<pre><span id="question">Assume that you are accessing a Linux shell on LXTerminal and your current prompt is at 'lubuntu@lubuntu:~$'. 
+Provide the command (together with any required parameters and/or arguments) 
+that renames a file on the same directory with label "SORRY" to "NO_CURE". </span>[2m]
+        
+mv SORRY NO_CURE
+</pre>
+        
+<br><br><h1>Question 6</h1>
+<img src="Images/Tests/TSN 2101, MT4, image 6.png">
+<pre><span id="question">
+i) NPSJF
+ii) PSJF
+iii) NPPS
+iv) PPS
+v) RR (q=2)
+
+</span> [10m]<br>
+<img src="Images/Tests/TSN 2101, MT4, image 6a.png">
+
+</pre>
+        
+
+        
+        </div>
+
+    </div>
+
+    <input type="checkbox" id="accordion2" class="hidecontent"/>
+    <label for="accordion2">Test 1</label>
+    <div class="content hidecontent">
+    
+
+    
+    </div>
+
+    <input type="checkbox" id="accordion3" class="hidecontent"/>
+    <label for="accordion3">Test 2</label>
+    <div class="content hidecontent">
+    
+
+    
+    </div>
+
+</div>
+<br>
+
+
+
+
+
+
+<!-- 
+<h1>Trimester , 20/20</h1> 
+    <img src=""> 
+<h1>Trimester , 20/20</h1> 
+    <img src="">   
+
+<input type="checkbox" id="accordion" class="hidecontent"/>
+<label for="accordion">Trimester , 20/20 []</label>
+<div class="content hidecontent">
+
+  <h1>Question </h1>
+    <img src="">
+
+</div>
+-->
+
+<h1 id="padded">Answers may not be correct, anything contact me.</h1>
+
+
+
+
+<script type="text/javascript" src="../js/module.js"></script>
+</body>
+</html>

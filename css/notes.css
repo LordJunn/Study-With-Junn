@@ -27,6 +27,9 @@ html {
   h1, h2, h3 {
     font: 35px 'Ibarra Real Nova', serif;
   }
+  .nota {
+    padding: 10px 25px;
+  }
   
   #padded {
     padding: 0 0 15px 25px; 
@@ -280,22 +283,4 @@ nav {
       max-width: 100%;  /* Ensures images will not stretch beyond their container */
       height: auto;     /* Maintains aspect ratio */
       width: auto;      /* Optional: ensures the image is not restricted to a fixed width */
-    }
-
-    /* speciul */
-    .important {
-      color: red;
-      font-weight: bold;
-    }
-    #special {
-      background-color: yellow;
-      padding: 5px;
-    }
-    #question {
-      color: blue;
-    }
-    #hint {
-      color: rgb(174, 174, 255);
-      font-size: 0.8em;
-      background-color: rgb(255, 255, 214);
     }
