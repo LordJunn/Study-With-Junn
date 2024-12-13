@@ -47,12 +47,19 @@ Each is loadable as needed within the kernel
 <br><br><h1>Question 2</h1>
 <pre><span id="question">Operating systems (OS) are interrupt driven. How interrupts are handled by the OS?</span> [2m]
         
+When an interrupt occurs, the OS saves the current state of the CPU, identifies the type of interrupt via an interrupt vector table, 
+and executes the corresponding Interrupt Service Routine (ISR) to handle the interrupt. 
+After handling the interrupt, the OS restores the CPU state and resumes the interrupted process. 
+This allows the system to respond efficiently to events like hardware signals or system calls.
 
+<span id="hint">GPT</span>
 </pre>
         
 <br><br><h1>Question 3</h1>
 <pre><span id="question">What are the differences between a trap and an interrupt? What is the use of each type?</span> [4m]
         
+Interrupts are hardware based. It responds to external events. It is handled by interrupt service.
+Traps are software based. It handle program errors or system calls. It is handled by the OS
 
 </pre>
     
@@ -69,9 +76,9 @@ If they should ever meet, then either a stack overflow error will occur, or else
 <pre><span id="question">A child process has a PID 1000, this child process is created by a parent Process. 
 What is a possible PID value for the parent Process?</span> [1m]
 
-
+Any PID as long as it is not 1000
     
-
+<span id="hint">GPT</span>
 </pre>
     
 <br><br><h1>Question 6</h1>
@@ -90,8 +97,9 @@ Below is the process table<br>
 <pre><span id="question">i) Draw the Gantt charts illustrating the execution of these processes using 
 Pre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</span> [4m]
 
-<span id="question">ii) What is the value of average turn-around time forPre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</span> [2m]
+<span id="question">ii) What is the value of average turn-around time for Pre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</span> [2m]
     
+<img src="Images/Tests/TSN 2101, MT1, image 7a.png">
 
 </pre>
   
@@ -106,6 +114,26 @@ Pre-emptive Shortest Job First (SJF) and Round Robin (quantum=3) scheduling.</sp
 <pre><span id="question">Process needs computer resources to accomplish its task. 
 Provides four examples of computer resources.</span> [4m]
         
+Here are four examples of computer resources that a process needs to accomplish its task:
+
+    CPU (Central Processing Unit): 
+    The CPU is the core hardware responsible for executing instructions and performing computations for processes. 
+    It is essential for running the code of a process.
+
+    Memory (RAM): 
+    Memory is required by a process to store data, variables, and instructions while it is running. 
+    It includes both the system’s primary memory (RAM) and possibly cache memory.
+
+    Disk Space: 
+    Processes often need storage to read from or write to files, such as program files, data files, or temporary files. 
+    Disk space provides long-term storage for data beyond volatile memory (RAM).
+
+    Input/Output Devices: 
+    Processes may require access to I/O devices such as a keyboard, mouse, display screen, printer, or network interfaces to interact with users or other systems.
+
+These resources are crucial for a process to perform its intended operations and complete tasks effectively.
+
+<span id="hint">GPT</span>
 
 </pre>
         
@@ -162,9 +190,11 @@ CPU-bound process – spends more time doing computations; few very long CPU bur
 <br><br><h1>Question 7</h1>
 <img src="Images/Tests/TSN 2101, MT2, image 7.png">
 <pre><span id="question">i) Draw the Gantt charts illustrating the execution of these processes using 
-Pre-emptive ShortestJob First (Pre-SJF), Non-Pre-emptive Shortest Job First (Non-Pre- SJF) and Round Robin (quantum=3) scheduling.</span>[6m]
+Pre-emptive Shortest Job First (Pre-SJF), Non-Pre-emptive Shortest Job First (Non-Pre- SJF) and Round Robin (quantum=3) scheduling.</span>[6m]
 
 <span id="question">ii) What is the value of average turn-around time for Round Robin (quantum=3) scheduling.</span> [1m]    
+
+<img src="Images/Tests/TSN 2101, MT2, image 7a.png">
 
 </pre>
  
@@ -181,6 +211,25 @@ Pre-emptive ShortestJob First (Pre-SJF), Non-Pre-emptive Shortest Job First (Non
 <pre><span id="question">In operating systems, certain instructions could be executed only when the Central Processing Unit (CPU) is in kernel mode. 
 Explain why by providing the reason.</span> [2m]
     
+Certain instructions in an operating system can only be executed when the CPU is in kernel mode because of privilege levels and the need for system security and stability.
+
+    Privilege Levels: 
+    The CPU operates in two primary modes: user mode and kernel mode. 
+    In user mode, programs (applications) have limited access to system resources to prevent them from directly interacting with hardware or modifying critical system settings. 
+    This restriction helps ensure that applications cannot inadvertently or maliciously disrupt the operating system or other applications.
+
+    Access to Critical System Resources: 
+    In kernel mode, the operating system has full access to all system resources, including hardware and memory. 
+    Certain sensitive instructions, such as those that involve interacting with hardware, managing memory directly, or altering system configurations, require this level of access to ensure that they can be performed securely and correctly.
+
+    Protection Mechanism: 
+    Allowing only kernel-mode code (operating system code) to execute certain privileged instructions helps protect the system from user-mode programs. 
+    If user-mode programs were allowed to execute such instructions, they could potentially cause system crashes, corrupt data, or even compromise security by gaining unauthorized access to hardware or memory.
+
+In summary, executing certain instructions only in kernel mode ensures that only trusted, 
+privileged code (i.e., the operating system) can perform critical tasks, maintaining both the security and stability of the system.
+
+<span id="hint">GPT</span>
 
 </pre>
     
@@ -218,6 +267,9 @@ The process state diagram describes different process states during its lifetime
 ii) Scheduler B (Running to Waiting)
 iii) Scheduler C (Ready to Running)</span>
 
+i) Long term scheduler
+ii) Medium term scheduler
+iii) Short term scheduler
 
 </pre>
     
@@ -233,6 +285,8 @@ Calculate the average turnaround time and the average waiting time for this algo
 
 <span id="question">iii) Draw the Gantt chart illustrating the execution of these processes using, 
 Round Robin (RR) (quantum = 3) scheduling with showing the necessary steps.</span> [3m]
+
+<img src="Images/Tests/TSN 2101, MT3, image 4a.png">
 
 </pre>
         
