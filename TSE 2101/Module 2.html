@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSE 2101 - 2</title>
+</head>
+
+<body>
+	<!-- This will hold the dynamically generated header -->
+	<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+	data-course="TSE 2101 - Software Process"
+	data-topic-link="../TSE 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+	<input type="checkbox" id="accordion3" class="hidecontent"/>
+	<label for="accordion3">Questions from Tutorials</label>
+	<div class="content hidecontent">
+
+<h1>Question 1</h1>
+<pre><span id='question'>Describe a process framework in your own words. 
+When we say that framework activities are applicable to all projects, 
+does this mean that the same work tasks are applied for all projects, regardless of size and complexity? 
+Explain.</span>
+        
+- A process framework is like a step-by-step guide for building software. It lays out
+the main things you need to do, like figuring out what the software needs to do,
+designing it, building it, testing it, and then putting it into use.
+- When we say that framework activities apply to all projects, it means that these
+main steps are relevant for every project, no matter how big or complicated.
+However, the details of each step can change depending on the project. For
+example, a small project might have simpler tasks, while a big project might need
+more planning and documentation.
+- So, while the basic steps are the same for all projects, how you do them can vary
+based on what each project needs to be successful.
+        
+</pre>
+<br><br><h1>Question 2</h1>
+<pre><span id='question'>Give some examples of umbrella activities, which occur throughout the software
+process. Do you think they are applied evenly across the process, or are some
+concentrated in one or more framework activities?</span>
+        
+- Umbrella activities are overarching tasks that occur throughout the software
+development process, providing support and guidance across multiple framework
+activities. Examples of umbrella activities include:
+1. Software Quality Assurance: Ensuring that the software meets predefined quality
+standards by conducting reviews, inspections, and testing.
+2. Verification and Validation: Checking that the software meets its specified
+requirements and functions correctly.
+3. Documentation: Creating and maintaining various documents such as
+requirements specifications, design documents, and user manuals.
+4. Risk Management: Identifying potential risks to the project and implementing
+strategies to mitigate or manage them.
+5. Measurement: Collecting data and metrics to assess the progress and quality of
+the software development process.
+6. Configuration Management: Managing changes to the software and ensuring
+version control and consistency.
+
+- While umbrella activities are relevant throughout the entire software development
+process, their intensity and focus may vary across different framework activities.
+For example:
+ Software Quality Assurance and Verification and Validation activities are
+distributed across all framework activities but may be more concentrated during
+testing and integration phases.
+ Documentation efforts are ongoing throughout the process but may peak during
+requirements analysis and design phases.
+ Risk Management activities are essential from the project's initiation to its
+completion but may receive increased attention during planning and design phases
+to identify potential risks early.
+ Measurement activities are conducted throughout the process to track progress
+and quality, with a focus on gathering relevant data during each framework
+activity.
+ Configuration Management activities are crucial for maintaining consistency and
+managing changes, with continuous application throughout the development
+process.
+        
+</pre>
+<br><br><h1>Question 3</h1>
+<pre><span id='question'>Compare the following software engineering paradigms and discuss the type of
+software project that would be more applicable to each model.</span>
+        
+<span id='question'>Waterfall model</span>
+ Description: The waterfall model follows a linear and sequential approach,
+where each phase (requirements, design, implementation, testing,
+deployment) must be completed before moving to the next.
+ Applicability: Well-suited for projects with clear and stable requirements,
+where changes are unlikely or minimal. Projects with a fixed scope and
+well-understood technology can benefit from the waterfall model.
+Examples include government projects, regulatory compliance software,
+and some traditional engineering projects.
+        
+<span id='question'>Incremental model</span>
+ Description: The incremental model divides the project into small,
+manageable increments or modules. Each increment follows the waterfall
+model, with each increment building upon the previous one.
+ Applicability: Ideal for large projects where requirements are not
+completely understood upfront or may evolve over time. Projects with a
+need for frequent releases or where stakeholders require early visibility into
+the system's functionality can benefit. Examples include enterprise resource
+planning (ERP) systems, large-scale e-commerce platforms, and complex
+software solutions.
+
+<span id='question'>Prototyping model</span>
+ Description: The prototyping model involves building a simplified version
+of the system, known as a prototype, to explore ideas, gather requirements,
+and validate design decisions. Prototypes are refined iteratively based on
+feedback until the final system is developed.
+ Applicability: Suitable for projects with unclear or rapidly changing
+requirements, where stakeholders need to visualize the system early in the
+development cycle. Projects involving user interface design, user
+experience (UX) improvements, and innovative software solutions can
+benefit from prototyping. Examples include mobile app development, web
+application redesign, and user-centric software projects.
+
+<span id='question'>Spiral model</span>
+ Description: The spiral model combines elements of both the waterfall
+model and iterative development. It consists of multiple iterations, each
+involving risk analysis, prototyping, development, and evaluation. The
+model emphasizes risk management and allows for flexibility in
+accommodating changes.
+ Applicability: Ideal for large-scale, complex projects with high levels of
+uncertainty and risk. Projects where requirements are expected to evolve,
+and early identification and mitigation of risks are critical, can benefit from
+the spiral model. Examples include software for space missions, defense
+systems, and mission-critical applications in healthcare and finance.
+
+
+</pre>
+<br><br><h1>Question 4</h1>
+<pre><span id='question'>Many of the recent models contain prototypes. Discuss what a software prototype is.</span>
+        
+A software prototype is essentially an early version or mock-up of a software system that
+is created to demonstrate its functionality, design, and features before the final product is developed.
+        
+</pre>
+<br><br><h1>Question 5</h1>
+<pre><span id='question'>Discuss the values specified in the Agile Manifesto and how they relate to the “agility” of a software project.</span>
+        
+The Agile Manifesto outlines four key values that emphasize flexibility, collaboration, and
+responsiveness in software development. Here's a simplified breakdown of each value and
+its relation to the agility of a software project:
+1. Individuals and interactions over processes and tools: This value emphasizes
+the importance of prioritizing people and their communication over relying solely
+on tools and processes. By focusing on individuals and fostering collaboration,
+teams can adapt more quickly to changing requirements and feedback, increasing
+the agility of the project.
+2. Working software over comprehensive documentation: Agile values software
+that delivers tangible value to users over extensive documentation. This doesn't
+mean documentation isn't important, but it should be lean and serve the immediate
+needs of the project. By prioritizing working software, teams can quickly iterate,
+respond to changes, and deliver value to customers, enhancing project agility.
+3. Customer collaboration over contract negotiation: Agile encourages close
+collaboration with customers throughout the development process. By involving
+customers in the development cycle, teams can gather feedback early and
+continuously refine the product to better meet customer needs. This collaborative
+approach fosters adaptability and ensures the project remains aligned with customer
+expectations, increasing agility.
+4. Responding to change over following a plan: Agile recognizes that change is
+inevitable in software development. Rather than rigidly adhering to a fixed plan,
+Agile advocates for embracing change and adjusting priorities based on evolving
+requirements and feedback. By remaining flexible and responsive to change, teams
+can quickly adapt to new information and market conditions, maintaining project
+agility.
+
+        
+</pre>
+<br><br><h1>Question 6</h1>
+<pre><span id='question'>Explain the key ideas and tasks for the framework activities in Extreme Programming.
+How are they different from the Prescriptive Process Models such as Waterfall Model?</span>
+        
+Extreme Programming (XP) is all about flexibility and adaptability. It breaks down the
+development process into smaller, manageable chunks:
+1. Planning: Instead of planning everything at once, XP teams plan in short bursts,
+focusing on what needs to be done right away.
+2. Design: XP keeps things simple. It's about building something that works and
+improving it gradually, rather than trying to make everything perfect from the start.
+3. Coding: XP teams work closely together, writing code in pairs and testing it as they
+go. They prioritize writing clean, tested code.
+4. Testing: Testing happens throughout the process in XP. Teams write tests before
+writing code and test often to make sure everything works as expected.
+5. Listening: XP teams listen to feedback from customers and stakeholders, adjusting
+their plans and products accordingly.
+6. Feedback: XP teams regularly review their progress and look for ways to improve.
+They're always learning and adapting to change.
+Prescriptive Process Models, like the Waterfall Model, follow a more rigid approach:
+1. Sequential Steps: They follow a step-by-step process, where each phase is
+completed before moving to the next.
+2. Detailed Planning: Everything is planned out upfront, with a comprehensive plan
+created before any coding begins.
+3. Big Design Upfront: These models focus on creating a detailed design before
+starting development.
+4. Limited Customer Involvement: There's less interaction with customers, and
+changes are harder to make once development begins.
+5. Less Flexibility: Changes late in the process can be difficult and costly to
+implement.
+        
+</pre>
+<br><br><h1>Question 7</h1>
+<pre><span id='question'>Briefly describe the Scrum method. Explain the meanings of the following terms:</span>
+
+Scrum is an agile framework for managing and organizing work, particularly in software
+development projects. Here's a quick overview of its key concepts:
+
+<span id='question'>Backlog</span>
+  
+The backlog is a prioritized list of tasks, features, or user stories that
+need to be completed during the project. It serves as a dynamic document that
+evolves over time as new requirements emerge or existing ones change.
+
+<span id='question'>Sprints</span>
+
+Sprints are time-boxed iterations, usually lasting between one to four
+weeks, where development work is completed. At the beginning of each sprint, a
+subset of items from the backlog is selected for implementation based on priority
+and team capacity. The goal is to produce a potentially shippable product
+increment by the end of the sprint.
+
+<span id='question'>Scrum master</span>
+        
+The Scrum Master is a facilitator and coach responsible for
+ensuring that the Scrum framework is understood and followed by the team. They
+remove impediments, help the team adhere to Scrum practices, and foster a
+culture of continuous improvement. The Scrum Master also helps to organize and
+facilitate Scrum events, such as daily stand-up meetings, sprint planning, sprint
+review, and sprint retrospective sessions.
+
+</pre>
+
+	</div>	
+</div>
+
+
+<!-- 
+<h1>Questions  - </h1> 
+    <img src=""> 
+<h1>Questions  - </h1> 
+    <img src="">  
+<h1>Question </h1> 
+    <img src="">   
+-->
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 1.html" target="_blank">Module 1</a></button>
+    <button class="button-1"><a href="Module 3.html" target="_blank">Module 3</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

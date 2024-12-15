@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSE 2101 - 6</title>
+</head>
+
+<body>
+	<!-- This will hold the dynamically generated header -->
+	<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+	data-course="TSE 2101 - Design Modelling 1"
+	data-topic-link="../TSE 2101.html">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+	<input type="checkbox" id="accordion3" class="hidecontent"/>
+	<label for="accordion3">Questions from Tutorials</label>
+	<div class="content hidecontent">
+
+<h1>Question 1</h1>
+<pre><span id='question'>Using architecture of a house or building as a metaphor, draw comparisons with software architecture. What are the similarities and differences?</span>
+        
+Similarities:
+1. Blueprints/Design Plans: Both software and building architectures begin with
+detailed blueprints or design plans that outline the structure, components, and
+interactions of the system. These blueprints serve as a roadmap for construction.
+2. Structural Components: Just as buildings have structural components like walls,
+floors, and roofs, software systems have components such as modules, classes,
+and interfaces that form the foundation of the system.
+3. Functionality and Purpose: Both architectures are designed to fulfill specific
+functions or purposes. A building is constructed to provide shelter,
+accommodation, or workspace, while software is developed to perform certain
+tasks or provide services.
+4. Scalability and Flexibility: Both architectural designs aim to accommodate
+future changes and expansions. A well-designed building or software system
+should be scalable and flexible enough to adapt to evolving needs and
+requirements.
+5. Aesthetics and User Experience: Both architectures consider aesthetics and user
+experience. In buildings, architectural design affects factors like layout,
+aesthetics, and usability. Similarly, in software, the user interface (UI) design and
+user experience (UX) play crucial roles in usability and satisfaction.
+Differences:
+1. Physical vs. Virtual: The most obvious difference is that building architecture
+deals with physical structures and materials, whereas software architecture is
+concerned with virtual components and code.
+2. Construction Process: Building architecture involves physical construction
+processes like excavation, framing, and finishing, whereas software architecture is
+more about design, coding, testing, and deployment.
+3. Maintenance and Upkeep: Buildings require ongoing maintenance, repairs, and
+renovations to ensure structural integrity and safety. Software systems also
+require maintenance, but it involves updating code, fixing bugs, and enhancing
+features.
+4. Cost and Resources: The cost and resources involved in building architecture,
+such as materials, labor, and land, differ significantly from those in software
+architecture, which primarily involve human capital and computing resources.
+5. Lifecycle and Evolution: Building architecture tends to have a longer lifecycle,
+with renovations or major changes occurring less frequently. In contrast, software
+architecture often evolves rapidly, with updates, patches, and new versions
+released frequently to address changing requirements and technologies.
+        
+</pre>
+<br><br><h1>Question 2</h1>
+<pre><span id='question'>Briefly describe each of the four elements of the design model.</span>
+        
+The design model consists of five key elements, each playing a crucial role in the
+development of software systems:
+
+1. Data/Class Design: This element focuses on modeling the data structures and
+classes required by the software. It involves identifying the types of data that need
+to be stored and manipulated within the system and designing appropriate data
+structures and class hierarchies to represent them. Data/Class design ensures that
+data is organized efficiently and can be accessed and modified as needed by the
+software.
+2. Architectural Design: Architectural design defines the overall structure and
+organization of the software system. It involves identifying the major components
+or modules of the system, specifying their interactions and dependencies, and
+determining how they will be deployed and executed within the system
+environment. Architectural design provides a high-level view of the system's
+structure, guiding the implementation and integration of its various components.
+3. Interface Design: Interface design focuses on defining the external interfaces of
+the software system. This includes user interfaces, which allow users to interact
+with the system, as well as interfaces with other software systems or hardware
+devices. Interface design ensures that the system is easy to use, integrates
+seamlessly with other systems, and provides clear and consistent communication
+channels for data exchange.
+4. Component-Level Design: Component-level design involves detailed design and
+specification of individual software components or modules. It defines the
+internal structure and behavior of each component, including its data structures,
+algorithms, and interfaces. Component-level design ensures that each module
+performs its designated functions correctly and efficiently, and can be easily
+integrated into the larger system.
+5. Deployment-Level Design: Deployment-level design addresses the deployment
+and configuration of the software system within its target environment. It involves
+specifying how the system will be installed, configured, and distributed across
+various hardware platforms and network environments. Deployment-level design
+ensures that the software can be effectively deployed and operated in real-world
+settings, meeting performance, reliability, and scalability requirements.
+
+</pre>
+<br><br><h1>Question 3</h1>
+<pre><span id='question'>Select a few diagrams from the design model. For each diagram, describe the possible sources of its contents from the analysis model.</span>
+        
+Class Diagram:
+Possible Sources: The class diagram in the design model could be derived from the
+analysis model's class diagram. It refines and extends the classes identified during the
+analysis phase, adding more details such as attributes, methods, and relationships
+between classes. Additionally, the design class realizations identified during the analysis
+phase may be further refined and detailed in the design class diagram.
+
+Component Diagram:
+Possible Sources: The component diagram may draw its contents from various sources in
+the analysis model. It could represent the decomposition of high-level system
+components identified during analysis into smaller, more manageable modules. These
+components may correspond to subsystems, packages, or other architectural elements
+identified during the analysis phase. Additionally, the component diagram may depict the
+dependencies and interactions between these components, which may have been inferred
+from the analysis model's behavior diagrams or use case scenarios.
+
+Deployment Diagram:
+Possible Sources: The deployment diagram typically reflects the physical deployment of
+software components onto hardware nodes in a distributed system. The contents of this
+diagram may originate from the analysis model's description of the target environment
+and infrastructure requirements. It may specify the mapping of software components to
+hardware nodes, networks, and other physical resources. Additionally, deployment
+constraints and considerations identified during the analysis phase, such as performance
+requirements or security constraints, may influence the design decisions reflected in the
+deployment diagram.
+    
+</pre>
+<br><br><h1>Question 4</h1>
+<pre><span id='question'>Present two or three examples of applications for each of the architectural styles given in Lecture 6.</span>
+        
+Data-Centered Architecture:
+- Examples:
+- Online Banking Systems: These systems typically revolve around managing and
+processing large volumes of customer data, such as account information, transaction
+history, and user profiles. The architecture focuses on efficient data storage, retrieval, and
+manipulation to ensure the integrity and security of financial information.
+- Customer Relationship Management (CRM) Systems: CRM systems centralize
+customer-related data, including contact information, purchase history, and interactions.
+The architecture emphasizes data accessibility and consistency across different modules,
+enabling seamless customer interactions and personalized services.
+- Inventory Management Systems: These systems track and manage inventory levels,
+orders, and supply chain activities. The architecture prioritizes efficient data management
+to ensure real-time visibility into inventory levels, optimize stock replenishment, and
+minimize stockouts.
+
+Data Flow Architecture:
+- Examples:
+- Online Marketplace Platforms: These platforms facilitate transactions between
+buyers and sellers, involving multiple data flows such as product listings, orders,
+payments, and shipping notifications. The architecture focuses on orchestrating these data
+flows efficiently while ensuring data integrity, security, and scalability.
+- Content Management Systems (CMS): CMS platforms enable users to create,
+manage, and publish digital content, including articles, images, videos, and documents.
+The architecture supports content creation, editing, and publishing workflows, with data
+flows for content ingestion, storage, retrieval, and presentation.
+- Automated Manufacturing Systems: These systems control the flow of materials,
+parts, and information in manufacturing processes, orchestrating activities such as
+production scheduling, inventory management, and quality control. The architecture
+emphasizes the coordination of data flows between different production stages and
+equipment to optimize efficiency and minimize downtime.    
+
+Call and Return Architecture:
+- Examples:
+- Web-Based E-Commerce Applications: E-commerce applications follow a call and
+return architecture, where client requests (calls) trigger server-side processing (return) to
+generate responses. These applications handle user interactions such as browsing
+products, adding items to the cart, and completing checkout processes.
+- Enterprise Resource Planning (ERP) Systems: ERP systems integrate various
+business processes and functions across an organization, including finance, human
+resources, supply chain, and customer relationship management. The architecture
+involves invoking specific modules or services (calls) to perform tasks such as payroll
+processing, inventory management, and order fulfillment.
+- Online Ticket Booking Systems: Ticket booking systems handle user requests for
+booking tickets to events, flights, or shows. The architecture processes user inputs (calls),
+validates availability and pricing, and confirms bookings (return) by interacting with
+backend databases and external services.
+
+</pre>
+<br><br><h1>Question 5</h1>
+<pre><span id='question'>Explain the terms architectural style, architectural pattern, and framework in relation to software architecture.</span>
+        
+Architectural Style:
+An architectural style refers to a set of principles or guidelines that shape the overall
+structure, organization, and behavior of a software system. It represents a fundamental
+design choice that dictates how components and modules within the system interact and
+communicate with each other. Architectural styles often embody common design
+decisions and trade-offs, influencing aspects such as system scalability, performance,
+maintainability, and flexibility.
+Example: Client-Server Architecture, where client devices (e.g., web browsers, mobile
+apps) interact with centralized servers to request and receive services or data. This style
+emphasizes the separation of concerns between client-side presentation and server-side
+processing.
+
+Architectural Pattern:
+An architectural pattern is a reusable solution to a recurring design problem within a
+specific context. It provides a high-level template or blueprint for organizing the structure
+and behavior of software systems, guiding the arrangement of components, modules, and
+interactions to achieve desired architectural qualities. Architectural patterns capture best
+practices and proven design strategies, offering guidance on system decomposition,
+communication mechanisms, and overall system organization.
+Example: Model-View-Controller (MVC) Pattern, which separates the presentation,
+business logic, and data access layers of an application. This pattern promotes
+modularity, maintainability, and testability by decoupling user interfaces (Views) from
+application logic (Controllers) and data storage (Models).
+
+Framework:
+In software architecture, a framework is a pre-established structure or skeleton that
+provides a foundation for building specific types of software applications. It typically
+consists of reusable components, libraries, and design patterns tailored to address
+common requirements or domain-specific challenges. Frameworks offer developers a
+standardized way to create, extend, and customize software solutions by encapsulating
+essential functionalities, enforcing design principles, and providing extension points for
+application-specific logic.
+Example: Spring Framework for Java, which offers comprehensive support for
+developing enterprise-scale Java applications. It provides modules for dependency
+injection, aspect-oriented programming, transaction management, and other cross-cutting
+concerns, enabling developers to focus on business logic while leveraging built-in
+infrastructure components.
+        
+</pre>
+		
+	</div>	
+</div>
+
+
+<!-- 
+<h1>Questions  - </h1> 
+    <img src=""> 
+<h1>Questions  - </h1> 
+    <img src="">  
+<h1>Question </h1> 
+    <img src="">   
+-->
+
+<!-- these links to previous & next modules -->
+<div class="container2">
+    <button class="button-1"><a href="Module 5.html" target="_blank">Module 5</a></button>
+    <button class="button-1"><a href="Module 7.html" target="_blank">Module 7</a></button>
+</div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>
