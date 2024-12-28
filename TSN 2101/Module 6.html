@@ -43,7 +43,7 @@
     <div class="content hidecontent">
 <br><br><h1>Question 1</h1>
 
-<pre><span style="color: blue;">Explain the four conditions that must hold for deadlock to occur.</span>
+<pre><span id="question">Explain the four conditions that must hold for deadlock to occur.</span>
 
 The four conditions that must hold for a deadlock to occur are:
 
@@ -61,7 +61,7 @@ Pn-1 is waiting for a resource held by Pn, and P0 is waiting for a resource held
 
 <br><br><h1>Question 2</h1>
 
-<pre><span style="color: blue;">Consider a system consisting of four resources of the same type that are shared by three processes, each of which needs at most two resources. 
+<pre><span id="question">Consider a system consisting of four resources of the same type that are shared by three processes, each of which needs at most two resources. 
 Show that the system is deadlock-free.</span>
 
 Suppose the system is deadlocked. This implies that each process is holding one resource and waiting for another. 
@@ -72,51 +72,22 @@ This process will not need more resources, and thus, it will release its resourc
 
 <br><br><h1>Question 3</h1>
 
-<pre><span style="color: blue;">Consider the following snapshot of a system:
-Process Allocation
-ABCD
-
-Max
-ABCD
-
-Available
-ABCD
-P0 0012 0012 1520
-P1 1000 1750
-P2 1354 2356
-P3 0632 0652
-P4 0014 0656
+<pre><span id="question">Consider the following snapshot of a system:
+<img src="Images/C6/TSN 2101, C6, image 3.png">
 Answer the following questions using the banker's algorithm:</span>
 
-a) <span style="color: blue;">What is the content of the matrix Need?</span>
+<span id="question">a) What is the content of the matrix Need?
+b) Is the system in a safe state?
+c) If a higher priority request made by process P1 for (0,4,2,0) resources, can the request be granted immediately?
+d) Is the new system in a safe state? </span>
 
-Since <b>Need</b> = <b>Max</b> - <b>Allocation</b>, the content of <b>Need</b> is:
-
-ABCD  
-P0: 0000  
-P1: 0750  
-P2: 1002  
-P3: 0020  
-P4: 0642
-
-b) <span style="color: blue;">Is the system in a safe state?</span>
-
-Yes, the sequence <b>P0, P2, P1, P3, P4</b> satisfies the safety requirement. This means the system is in a safe state.
-
-c) <span style="color: blue;">If a higher priority request made by process P1 for (0,4,2,0) resources, can the request be granted immediately?</span>
-
-Yes, the request can be granted immediately because:
-
-i. (0,4,2,0) ≤ Need(P1) = (0,7,5,0)  
-ii. (0,4,2,0) ≤ Available = (1,5,2,0)
-
-The new system state after the allocation is made is still safe, and the sequence <b>P0, P2, P1, P3, P4</b> satisfies the safety requirement.
+<img src="Images/C6/TSN 2101, C6, image 3a.png">
 
 </pre>
 
 <br><br><h1>Question 4</h1>
 
-<pre><span style="color: blue;">What is the optimistic assumption made in the deadlock-detection algorithm? How could this assumption be violated?</span>
+<pre><span id="question">What is the optimistic assumption made in the deadlock-detection algorithm? How could this assumption be violated?</span>
 
 The optimistic assumption made in the deadlock-detection algorithm is that there will be no circular wait conditions in terms of 
 resource allocation and processes making requests for those resources. 
