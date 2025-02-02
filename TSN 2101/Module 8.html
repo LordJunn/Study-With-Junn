@@ -25,10 +25,7 @@
 	<input type="checkbox" id="accordion1" class="hidecontent"/>
 	<label for="accordion1">Questions from Textbook</label>
 	<div class="content hidecontent">
-<h1>Question 1</h1> 
-    <img src="">  
-<h1>Question 2</h1> 
-    <img src="">  
+
 	</div>
 
 
@@ -48,22 +45,11 @@
 The list of free page frames is D, E, F (D is at the head of the list, E is second, and F is last). 
 Convert the following virtual addresses to their equivalent physical addresses in hexadecimal. 
 All numbers are given in hexadecimal. A dash for frame indicates that the page is not in memory. 
-If the frame is not in memory, it will be brought to one of the free page frames in order.
+If the frame is not in memory, it will be brought to one of the free page frames in order.</span></pre>
     
 <img src="Images/C8/TSN 2101, C8, image 1.png">
 
-(i) 9EF
-(ii) 111
-(iii) 700
-(iv) 0FF</span>
 
-Solution:
-(i) 0EF
-(ii) 211
-(iii) D00
-(iv) EFF
-
-</pre>
 <br><br><h1>Question 2</h1>
 
 <pre><span style="color: blue;">Consider the following page table in a demand paging system. Assume the page size of 2000 bytes. Assume the usage of decimal values. 
@@ -132,59 +118,21 @@ Effective Memory Access Time
 1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
 Assume the availability of FOUR frames and all the frames are initially empty. 
 How many page faults would occur for First in First Out (FIFO) page replacement algorithm? 
-Identify the final pages in the frames.
+Identify the final pages in the frames.</span></pre>
 
-</span>
+<img src="Images/C8/TSN 2101, C8, image 5.png">
 
-Solution:
-(i) First In First Out (FIFO) page replacement algorithm:
-Number of available frames: 4
-Before Page Fault After
--, -, -, - 1 Yes (1) 1, -, -, -
-1, -, -, - 2 Yes (2) 2, 1, -, -
-2, 1, -, - 3 Yes (3) 3, 2, 1, -
-3, 2, 1, - 4 Yes (4) 4, 3, 2, 1
-4, 3, 2, 1 2 No 4, 3, 2, 1
-4, 3, 2, 1 1 No 4, 3, 2, 1
-4, 3, 2, 1 5 Yes(5) 5, 4, 3, 2
-5, 4, 3, 2 6 Yes (6) 6, 5, 4, 3
-6, 5, 4, 3 2 Yes(7) 2, 6, 5, 4
-2, 6, 5, 4 1 Yes(8) 1, 2, 6, 5
-1, 2, 6, 5 2 No 1, 2, 6, 5
-1, 2, 6, 5 3 Yes (9) 3, 1, 2, 6
-3, 1, 2, 6 7 Yes(10) 7, 3, 1, 2
-7, 3, 1, 2 6 Yes(11) 6, 7, 3, 1
-6, 7, 3, 1 3 No 6, 7, 3, 1
-6, 7, 3, 1 2 Yes(12) 2, 6, 7, 3
-2, 6, 7, 3 1 Yes(13) 1, 2, 6, 7
-1, 2, 6, 7 2 No 1, 2, 6, 7
-1, 2, 6, 7 3 Yes (14) 3, 1, 2, 6
-3, 1, 2, 6 6 No 3, 1, 2, 6
 
-Number of page faults: 14
-Final Pages in the frames: 3, 1, 2, 6
-
-</pre>
 <br><br><h1>Question 6</h1>
 
 <pre><span style="color: blue;">Consider the following page reference string:
 1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
 Assume the availability of FOUR frames and all the frames are initially empty. 
-How many page faults would occur for Least Recently Used (LRU) page replacement algorithm? Identify the final pages in the frames.</span>
+How many page faults would occur for Least Recently Used (LRU) page replacement algorithm? Identify the final pages in the frames.</span></pre>
 
-Solution:
-LRU page replacement algorithm:
-Number of available frames: 4
+<img src="Images/C8/TSN 2101, C8, image 6.png">
 
-Reference string:
-1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6
 
-1 1 1 1 1 1 1 1 6 6
-2 2 2 2 2 2 2 2 2
-3 3 3 3 3 3 3 3 3
-8
-
-</pre>
 <br><br><h1>Question 7</h1>
 
 <pre><span style="color: blue;">
@@ -192,26 +140,11 @@ Consider the following page reference string:
 1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
 Assume the availability of FOUR frames and all the frames are initially empty. 
 How many page faults would occur for Optimal page replacement algorithm? 
-Identify the final pages in the frames.</span>
+Identify the final pages in the frames.</span></pre>
 
-Optimal Page replacement algorithm:
-Number of available frames: 4
+<img src="Images/C8/TSN 2101, C8, image 7.png">
 
-Reference string:
-1,2,3,4, 2,1,5,6, 2,1,2,3, 7,6,3,2, 1,2,3,6
 
-1 1 1 1 1 1 7 1
-2 2 2 2 2 2 2
-3 3 3 3 3 3
-4 5 6 6 6
-
-y y y y n n y y n n n n y n n n y n n n
-y- Page fault
-n- No page fault
-Number of Page faults: 8
-Final Pages in the frames: 1,2,3,6
-
-</pre>
 
 <br><br><h1>Question 8</h1>
 
