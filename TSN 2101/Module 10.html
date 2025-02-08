@@ -60,95 +60,39 @@ d. C-SCAN
 e. LOOK
 f. C-LOOK</span>
 
-Solution:
-Current request: track 345
-Pending request: 123, 874, 692, 475, 105, 376
-Head is moving towards track 0 (for SCAN)
+Total seek time is in ms.</pre>
+<img src="Images/C10/TSN 2101, C10, image 1.png">
 
-FIFO/FCFS     SSTF        SCAN
-Next track
-accessed
-123           222         376
-874           751         123
-692           182         692
-475           217         0
-105           370         874
-376           271         475
-              874         692
-
-Total seek
-distance
-2013           Total seek
-distance
-1298           Total seek
-distance
-1219
-
-Total seek
-time (ms)
-6039           Total seek
-time (ms)
-3894           Total seek
-time (ms)
-3675           3657
-
-Current request: track 345
-Pending request: 123, 874, 692, 475, 105, 376
-Head is moving towards track 0 (for C-SCAN, LOOK & C-LOOK)
-
-C-SCAN      LOOK        C-LOOK
-Next track
-accessed
-123           123         123
-105           105         105
-0             376         874
-999           475         692
-874           692         475
-692           874         376
-475           376
-
-Total seek
-distance
-1967           Total seek
-distance
-1009           Total seek
-distance
-1507
-
-Total seek
-time (ms)
-5901           Total seek
-time (ms)
-3027           Total seek
-time (ms)
-4521
-
-</pre>
 
 <h1>Question 2</h1>
 
 <pre><span style="color: blue;">List down the differences for RAID-0, Raid-1, Raid-2, Raid-3, Raid-4, Raid-5 and Raid-6.</span>
 
-Solution:
 Raid-0: No redundancy
+
 Raid-1: Disk Mirroring. Low CPU and more I/O
+
 Raid-2: Memory-Style Error-Correcting Code (ECC) organization. If one disk fails, the
 remaining bits of the byte and the associated error-correction bits can be read from
 other disks and be used to reconstruct the damaged data.
+
 Raid-3: Bit-interleaved Parity
 Disk controller can detect whether a sector has been correctly read, so a single
 parity bit can be used for error correction and detection. Every disk has to
 participate in every I/O request, which leads to a lower I/O request.
+
 Raid-4: Block-interleaved parity
 Keeps a parity block on a separate disk for corresponding blocks from N other
 disks. If one disk fails, the parity block can be used with the corresponding blocks
 from other disks to restore the blocks of the failed disk.
 However, a write request in a block must include a write request to the parity block as well.
+
 Raid-5: Block-interleaved distributed parity
 A parity block cannot store parity for blocks in the same disk because a disk failure
 would result in total loss. By spreading the parity across all the disks in the set,
 RAID-5 avoids the potential overuse of a single parity disk that can occur in
 RAID-4.
+
 Raid-6: P+Q redundancy
 Uses parity and Reed-Solomon (ECC code). The system can tolerate two disk failures.
 
@@ -169,13 +113,12 @@ v. RAID 6: 400GB
 
 <h1>Question 4</h1>
 
-<pre><span style="color: blue;">Differentiate between the following terms:</span>
+<pre><span style="color: blue;">Differentiate between the following terms:
 
 a. SCAN, Circular SCAN, LOOK, Circular LOOK and F-SCAN disk scheduling.
 b. Sector sparing and sector slipping of bad block recovery with respect to magnetic disks.
-c. Mirroring, bit level striping and block level striping with respect to RAID organization.
+c. Mirroring, bit level striping and block level striping with respect to RAID organization.</span>
 
-Solution:
 a.
 • SCAN: The disk arm starts at one end of the disk and moves towards the other end, servicing
 all outstanding requests on the route, until it reaches the last cylinder/track in that direction.
