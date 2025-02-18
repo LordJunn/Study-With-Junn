@@ -1,5 +1,5 @@
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Get the configuration element
     const configElement = document.getElementById('header-config');
 
@@ -45,5 +45,5 @@ window.onload = function() {
     menuToggleButton.addEventListener('click', () => {
         navMenu.classList.toggle('show');
     });
-};
+});
 
