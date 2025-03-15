@@ -30,7 +30,7 @@ html {
   
   #padded {
     padding: 0 0 15px 25px; 
-    font-size: 35px;
+
   }
   
 /* styling header */
@@ -206,6 +206,13 @@ nav {
 	#ouraccordion label:hover {
 		background: #65009c;
 	}
+
+  .accordion-blue label {
+    background: #3498db;
+    color: white;
+  }
+
+
 	.content {
 		box-shadow:0 0 20px #d4d4d4;
 		background: #fefcfffa;

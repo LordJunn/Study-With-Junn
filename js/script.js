@@ -133,25 +133,25 @@ function closeDisclaimer() {
 }
 
 // Example usage
-const countDownDates = [
-    //new Date("8 Feb, 2025 00:00:00").getTime(),
-    //new Date("25 Feb, 2025 09:00:00").getTime(),
-    new Date("24 Mar, 2025 00:00:00").getTime(),
-    new Date("29 Dec, 2024 16:56:00").getTime(),
-    new Date("11 Jul, 2024, 09:00:00").getTime(),
-];
-
 const countStartDates = [
-    //new Date("4 Nov, 2024 00:00:00").getTime(),
-    //new Date("4 Nov, 2024 00:00:00").getTime(),
     new Date("4 Nov, 2024 00:00:00").getTime(),
+    new Date("24 Mar, 2025 00:00:00").getTime(),
+    new Date("24 Mar, 2025 00:00:00").getTime(),
     new Date("29 Dec, 2024 16:55:00").getTime(),
     new Date("24 Jun, 2024, 00:00:00").getTime(),
 ];
 
+const countDownDates = [
+    new Date("24 Mar, 2025 00:00:00").getTime(),
+    new Date("7 Apr, 2025 09:00:00").getTime(),
+    new Date("29 Jun, 2025 00:00:00").getTime(),
+    new Date("29 Dec, 2024 16:56:00").getTime(),
+    new Date("11 Jul, 2024, 09:00:00").getTime(),
+];
+
 const containerIds = [
-    //"countdown-container-1",
-    //"countdown-container-2",
+    "countdown-container-1",
+    "countdown-container-2",
     "countdown-container-3",
     "countdown-container-4",
     "countdown-container-5",
