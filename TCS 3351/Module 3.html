@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCS 3351 - 3</title>
+</head>
+
+<body>
+	<!-- This will hold the dynamically generated header -->
+	<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+	data-course="TCS 3351 - Classical Cryptosystems"
+	data-topic-link="../TCS 3351.html"
+    data-prev="2"
+    data-next="4">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+
+
+
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+	<input type="checkbox" id="accordion3" class="hidecontent"/>
+	<label for="accordion3">Questions from Tutorials</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1>
+<pre><span id='question'>Distinguish between the following: 
+Substitution and transposition cipher
+Monoalphabetic and polyalphabetic cipher</span>
+
+Substitution cipher replaces one symbol or character with another, while transposition cipher changes the location of the symbol or character. 
+
+Monoalphabetic cipher is a one-to-one encipherment between a symbol in a plaintext to a symbol in the ciphertext. 
+The symbol in a plaintext is always enciphered into the same symbol in the ciphertext regardless of its position.
+
+Polyalphabetic cipher is a one-to-many encipherment between a symbol in a plaintext to a symbol in the ciphertext. 
+The symbol in a plaintext may be enciphered into different symbols in the ciphertext, depending on its position and the key stream used.
+
+</pre>
+
+
+
+<h1>Question 2</h1>
+<pre><span id='question'>State the maximum number of characters that will be changed in the ciphertext if only a single character is changed in the plaintext, 
+for each of the following ciphers. Briefly explain the reason for your answer.
+
+i) Affine
+ii) Auto-key
+iii) One-time pad
+iv) Rotor</span>
+
+Affine: one, Affine cipher is a monoalphabetic cipher that encrypts character independently 
+
+Auto-key: two; Since the plaintext will become part of the keystreams, when a character is changed, 
+          that ciphertext is changed, and the next ciphertext will changed too this character is the key for next encipherment 
+
+One-time pad: one. Each character is enciphered independently with specific key in the keystream. 
+
+Rotor: one. Each character is mapped to its corresponding ciphertext from the rotor.
+
+</pre>
+
+<h1>Question 3</h1>
+<pre><span id='question'>State the two problems with the one-time pad.</span>
+
+</pre>
+
+    <h1>Question 4</h1>
+        <img src="Images/C3/TCS 3351, C3, image 1.png"> 
+    <h1>Question 5</h1>
+        <img src="Images/C3/TCS 3351, C3, image 2.png">
+    <h1>Question 6</h1>
+        <img src="Images/C3/TCS 3351, C3, image 3.png">
+    <h1>Question 7</h1>
+        <img src="Images/C3/TCS 3351, C3, image 4.png">
+    <h1>Question 8</h1>
+        <img src="Images/C3/TCS 3351, C3, image 5.png">
+    <h1>Question 9</h1>
+        <img src="Images/C3/TCS 3351, C3, image 6.png">
+    <h1>Question 10</h1>
+        <img src="Images/C3/TCS 3351, C3, image 7.png">
+
+    </div>
+
+<!-- 
+<h1>Questions  - </h1> 
+    <img src=""> 
+<h1>Questions  - </h1> 
+    <img src="">  
+<h1>Question </h1> 
+    <img src="">   
+
+<h1>Question </h1>
+<pre><span id='question'></span>
+
+</pre>
+
+-->
+
+<!-- these links to previous & next modules, almost dynamically generated now -->
+<div class="container2"></div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>

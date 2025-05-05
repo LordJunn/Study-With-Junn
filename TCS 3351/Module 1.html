@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel="stylesheet" href="../css/module.css">
+<link href="https://fonts.googleapis.com/css?family=Alata | Ibarra+Real+Novaâdiaplay swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCS 3351 - 1</title>
+</head>
+
+<body>
+	<!-- This will hold the dynamically generated header -->
+	<div id="header-container"></div>
+
+<!-- Configuration for the header is stored here -->
+<div id="header-config"
+	data-course="TCS 3351 - Introduction: Security Goals, Services, Mechanisms, Cryptosystems"
+	data-topic-link="../TCS 3351.html"
+    data-prev="x"
+    data-next="2">
+</div>
+
+<!-- #end of header -->
+<br><br><br>
+
+
+
+<div id="myaccordion">
+	<input type="checkbox" id="accordion1" class="hidecontent"/>
+	<label for="accordion1">Questions from Textbook</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1> 
+    <img src="">  
+<h1>Question 2</h1> 
+    <img src="">  
+	</div>
+
+
+	<input type="checkbox" id="accordion2" class="hidecontent"/>
+	<label for="accordion2">Questions from Lecture Notes</label>
+	<div class="content hidecontent">
+
+	</div>
+
+	<input type="checkbox" id="accordion3" class="hidecontent"/>
+	<label for="accordion3">Questions from Tutorials</label>
+	<div class="content hidecontent">
+<h1>Question 1</h1>
+<pre><span id='question'>What do you mean by CIA Triad? Briefly explain each security goal with an example.</span>
+    
+CIA Triad is a major goal of data security that comprises confidentiality, integrity, and availability. 
+a) Confidentiality: It ensures the secrecy of the transmitted data from passive attacks such as interruption and traffic analysis. 
+b) Integrity: Assurance of the exact same data sent and received without having been altered, modified, or replayed. 
+c) Availability: It describes the accessibility of the resource or data to always authorized users all the time.
+
+</pre>
+
+<h1>Question 2</h1>
+<pre><span id='question'>What is the difference between passive and active security attacks? State the general approach that can be used for handling each type of these attacks.</span>
+    
+a) Passive attack: The attacker does not perform modification to the content of the data sent. For instance, spoofing and traffic analysis. 
+To prevent spoofing the sent data is encrypted. 
+To prevent traffic analysis the sent data is randomized. 
+
+b) Active attack: The attacker performs changes to the content of the original data sent. For example, interruption, alteration (modification), and fabrication. 
+To prevent interruption - installation of antivirus/malware to block potential DoS attack. 
+To prevent alteration (modification) - the data is signed digitally. 
+To prevent fabrication - the user's identities are identified before sending data (identification).
+
+</pre>
+
+<h1>Question 3</h1>
+<pre><span id='question'>Give an example of the type of attacks that will threaten availability and explain briefly.</span>
+    
+Denial of Service (DoS) Attack: This attack aims to make a network service unavailable by overwhelming the target with excessive traffic.
+Example: A Distributed Denial of Service (DDoS) attack where multiple compromised systems flood a website with traffic, causing it to crash.
+
+</pre>
+
+<h1>Question 4</h1>
+<pre><span id='question'>Briefly explain the meaning of the following terms related to security services:</span>
+    
+Authentication: The assurance that the communication entity is the one that it claims to be.  
+Non-repudiation: Provides protection against denial by one of the entities involved in a communication of having participated in all or part of the communication.
+
+</pre>
+
+<h1>Question 5</h1>
+<pre><span id='question'>Briefly discuss the basic model for network security and explain how person A can transmit the information in a secure manner to person B using this model.</span>
+    
+When person A (sender) intends to send a message secretly to person B (receiver), he will first request TTP to obtain secret information, which allows him to transform the data into a secure message via some transformation techniques. 
+The secure message is transmitted through the information channel, where the potential opponent may intercept and obtain it for an attack. 
+Person B, who receives the secure message, will request his secret information from TTP (whenever necessary) to transform the secure message back.
+
+</pre>
+
+<h1>Question 6</h1>
+<pre><span id='question'>Briefly describe the model for network access security with typical measures to be taken for security.</span>
+No answer here for now.
+
+</pre>
+
+<h1>Question 7</h1>
+<pre><span id='question'>Identify the type of security attack in the following example and briefly explain the reason for your answer. 
+When purchasing an item from the seller, person A gave an instruction to the bank to deduct RM 500.   
+Later person A found that instead of RM500, RM5000 was deducted from the account. How can you avoid this type of attack?</span>
+    
+Modification/alteration. Integrity property is violated. 
+The transaction should be encrypted so that the transaction amount is secret to an unauthorized party. 
+In addition, the implementation of a digital signature can be done for validation by the receiver bank.
+
+</pre>
+
+<h1>Question 8</h1>
+<pre><span id='question'>Briefly explain the differences between symmetric and asymmetric cryptography models.</span>
+    
+a) Symmetric cryptography: 
+Uses only a single private key in the encryption and decryption process. Both sender and receiver share this same private key.  
+
+b) Asymmetric cryptography: 
+Uses two different keys — a public key and a private key. 
+The sender uses the public key to encrypt plaintext, while the receiver uses the private key to decrypt the ciphertext.
+
+</pre>
+ 
+<h1>Question 9</h1>
+<pre><span id='question'>Answer the following questions with respect to symmetric cryptography. 
+In a cricket team, there are ‘11’ players. 
+How many keys are needed if all the players need to send secret messages to each other?
+How many keys are needed if everyone trusts the team’s coach? 
+If a player needs to send a message to another player, he/she first sends it to the coach, and the coach then sends the message to the other student.</span>
+
+No answer here for now.
+
+</pre>
+
+<h1>Question 10</h1>
+<pre><span id='question'>Repeat Question 9, assuming the usage of asymmetric cryptography.</span>
+
+No answer here for now.
+
+</pre>
+
+</div>
+
+
+<!-- 
+<h1>Questions  - </h1> 
+    <img src=""> 
+<h1>Questions  - </h1> 
+    <img src="">  
+<h1>Question </h1> 
+    <img src="">   
+
+<h1>Question </h1>
+<pre><span id='question'></span>
+
+</pre>
+
+-->
+
+<!-- these links to previous & next modules, almost dynamically generated now -->
+<div class="container2"></div>
+
+<script type="text/javascript" src="../js/module.js"></script>
+
+</body>
+</html>
